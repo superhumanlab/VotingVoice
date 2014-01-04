@@ -1,0 +1,12 @@
+/* $Id: styles.css 89590 2012-02-27 19:35:35Z kom $
+/css/0.1/screen/build/article/2.0/us/politics/styles.css 
+(c)2006 - 2012 The New York Times Company */
+
+@import url(/css/0.1/screen/build/article/2.0/styles.css?v=20111011);
+@import url(/css/0.1/screen/common/subNavigation.css);
+@import url(/css/0.1/screen/section/us/politics/specialseason/subNavigation.css);
+
+.navigation #navUs.selected {
+  margin-bottom: 0px;
+}
+

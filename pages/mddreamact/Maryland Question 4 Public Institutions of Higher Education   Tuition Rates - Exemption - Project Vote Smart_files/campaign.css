@@ -1,0 +1,204 @@
+div#campaignform {
+  float: right;
+  margin-left: 10px;
+  width: 300px;
+  background: #DBEBFA;
+  padding: 15px;
+}
+form#donationform input[type="submit"],
+form#donationform input[type="reset"] {
+  width: 100px;
+  padding: 5px;
+}
+form#donationform input[type="submit"] {
+  font-weight: bold;
+}
+form#donationform label {
+  font-weight: bold;
+}
+form#donationform input[type="checkbox"] {
+  vertical-align: middle;
+}
+div.fieldcontainer {
+  float: left;
+  width: 300px;
+  padding-bottom: 10px;
+}
+div.fieldcontainer input[type="text"],
+div.fieldcontainer select {
+  border: 1px #6A94CE solid;
+  width: 294px;
+  background: #FFFFFF;
+  padding: 3px;
+}
+div#titlecontainer,
+div#otitlecontainer {
+  width: 130px;
+}
+div#titlecontainer select,
+div#otitlecontainer input {
+  width: 100px;
+}
+/*div.fieldcontainer label[for="amount"] { display: none; }*/
+div.amountoption {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  height: 20px;
+}
+div.amountoption span.fakelabel {
+  float: left;
+  width: 150px;
+}
+div.amountoption input#otheramount {
+  width: 80px;
+}
+div.campaignpitch {
+  float: left;
+}
+/* temporary hackish api payment form
+ */
+form#apicampaignform .levelchoices ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+form#apicampaignform .levelchoices ul li {
+  margin-bottom: 35px;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-color: #DD7168;
+  border: 5px #FFFFFF solid;
+  color: #FFFFFF;
+}
+form#apicampaignform .levelchoices ul li a {
+  color: #FFFFFF;
+}
+form#apicampaignform .levelchoices ul li .radiocont {
+  display: block;
+  float: left;
+  min-height: 60px;
+}
+form#apicampaignform .levelchoices ul li input[type=radio] {
+  float: left;
+  margin: 25px auto;
+  margin-right: 10px;
+}
+form#apicampaignform .levelchoices ul li label {
+  display: block;
+  float: left;
+  width: 90%;
+}
+form#apicampaignform .levelchoices div#totalamount {
+  margin: 0px auto;
+  font-size: 150%;
+}
+form#apicampaignform .levelchoices div#totalamount input {
+  width: 100px;
+}
+form#apicampaignform #apikeycontainer {
+  width: 350px;
+}
+form#apicampaignform #apikeycontainer #apinotice {
+  margin-left: 10px;
+}
+#imagine-campaign-banner {
+  display: none;
+  width: 950px;
+  height: 350px;
+  background: #f0f7fd;
+  border: #CFCFCF 1px solid;
+  margin: 0 auto -95px;
+  z-index: -1;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
+}
+#imagine-campaign-banner h2 {
+  font-family: 'LeagueGothicRegular', helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #d92112;
+}
+#imagine-campaign-banner #contribute-callout button {
+  position: relative;
+  left: 100px;
+}
+#imagine-campaign-banner .girl {
+  position: relative;
+  top: -70px;
+  left: 100px;
+}
+#imagine-campaign-banner .close {
+  position: relative;
+  left: 4px;
+  z-index: 1;
+}
+#imagine-campaign .imagine-block {
+  background: #F0F7FD;
+  display: block;
+  margin-bottom: 25px;
+  padding: 15px;
+  width: 800px;
+}
+#imagine-campaign .imagine-block img,
+#imagine-campaign .imagine-block p {
+  display: block;
+  position: relative;
+  float: left;
+}
+#imagine-campaign .imagine-block img {
+  /*border: 3px solid @dark-blue;*/
+
+  position: relative;
+  top: 15px;
+}
+#imagine-campaign .imagine-block p {
+  font-family: 'LeagueGothicRegular', helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 110%;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  width: 530px;
+}
+#imagine-campaign .imagine-block p sup {
+  font-size: 32px;
+  position: relative;
+  top: 10px;
+}
+#imagine-campaign .imagine-block.manipulate p {
+  position: relative;
+  top: 75px;
+}
+#imagine-campaign .imagine-block.listen p {
+  position: relative;
+  top: 65px;
+}
+#imagine-campaign .imagine-block.pundit p {
+  position: relative;
+  top: 60px;
+}
+#imagine-campaign .imagine-block.jet-pack p {
+  position: relative;
+  top: 90px;
+}
+#imagine-campaign .formWrap {
+  background: #F0F7FD;
+  padding: 10px;
+}
+#imagine-campaign .formWrap fieldset {
+  border: 0;
+  margin: 0;
+  padding: 5px;
+}
+#imagine-campaign .formWrap fieldset #city,
+#imagine-campaign .formWrap fieldset #state {
+  width: 75px;
+}
+#imagine-campaign .formWrap fieldset ul {
+  padding-left: 0;
+}

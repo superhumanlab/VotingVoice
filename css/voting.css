@@ -1,0 +1,65 @@
+body { margin: 0px; background: #eee; height: 100%;}
+html { height: 100%;}
+
+#vvToolbar { height: 80px; width: 100%; background-color: #888; position: absolute; clear: both; top: 0; left: 0; padding: 10px; border-bottom: 3px solid #333;}
+
+#vvToolbarShadow { height: 100px;}
+
+#vvToolbar button { height: 80px; width: 100px; border-radius: 10px; border: 2px solid; padding: 5px; font-weight: bold; margin-right: 5px;}
+
+button:active {background: yellow;}
+.button-on { background: #F2F5A9 !important;}
+.annotator-button-on { background: #81DAF5; }
+.vvBtnAnnotator { margin-right: 15px;}
+
+#vvContent { padding: 10px; font-family: Helvetica, Arial, sans-serif; background: #eee;}
+#vvReadOverlay {padding: 10px; font-family: Helvetica, Arial, sans-serif; background: beige;}
+
+#sidemsg { width: 150px; background: green; float: right;}
+
+.annotator-hl-good { background: rgba(10,255,10,0.3) }
+.annotator-hl-bad { background: rgba(255,10,10,0.3) }
+
+.annotator-voteButtons { background: #CDD8E2 !important; padding: 5px !important; height: 55px !important;}
+.annotator-voteButtons div { float: left; display: block; height: 50px; width: 50px; padding: 0px; border: 2px solid silver; border-radius: 5px; margin-right: 5px; margin-top: 5px;}
+.annotator-star { border: 0px !important; }
+
+.annotator-badge-viewer { height: 30px; padding: 0px !important;}
+.annotator-badge-viewer img { height: 25px; width: 25px; padding: 0px !important;}
+.annotator-badge-viewer div { border: 0px !important; float: left; display: block; height: 25px; width: 25px; padding: 0px !important;}
+
+#vvPageElements { min-height: 100%; }
+#vvReviewSlides { height: 100%;}
+
+#vvReviewList {
+	margin: 0px; padding: 10px; font-family: Helvetica, Arial, sans-serif; background: #eee;
+} 
+
+#vvReviewList li {margin-bottom: 20px;}
+
+
+/* slide */
+#vvReviewSlideContainer {
+	background: #6C556F; padding: 40px; height: 600px;
+}
+
+#vvReviewSlideControls {
+	background: #aaa; height: 60px; padding: 10px;
+}
+
+#vvReviewSlideContent {
+	background: #fff; height: 400px; padding: 10px; border: 3px solid black; align; text-align: center; font-size: xx-large; font-weight: bold;
+	vertical-align: middle; 
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.vvReviewSlide { height: 100%; vertical-align: middle;}
+
+#slidePrevButton { float: left; height: 60px; width: 100px; background: black;}
+#slideNextButton { float: right; height: 60px; width: 100px; background: black;}
+
+#vvReviewNotes { font-family: Helvetica, Arial, sans-serif; padding: 20px; }
+#vvReviewNotesContent { float: left; width: 500px;  }
+#vvReviewNotesSidebar { float: right; width: 300px; padding: 20px; }
+.vvReviewSideNote { margin-bottom: 40px; background: #dee;}
