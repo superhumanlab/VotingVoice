@@ -216,7 +216,8 @@ function startReadability(element) {
 	runReadability = true;
 }
 
-function speak(text) {
+function vvSpeak(text) {
+	if (text == null || text.length == 0) text = 'no comments';
 	speaking = meSpeak.speak(text, {
 		variant: 'f2'
 	});
@@ -310,11 +311,7 @@ function getSelectedText() {
     }
     return text;
 }
-// http://stackoverflow.com/questions/6803463/how-can-you-detect-a-url-in-a-text-area-using-a-javascript-callback-function
-function isUrl(s) {
-    var regexp = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?(jpg|gif|png|jpeg)/
-    return regexp.test(s);
-}
+
 
 // slideshow
 var runSlides = false;
