@@ -393,17 +393,19 @@ function setupReadabilitySearch(element, outputID) {
 	var element = $(element);
 	var searchPanel = element.find('.vvReadabilitySearchPanel')
 	var searchResults = element.find('.vvReadabilitySearchResults');
-	searchResults.html('<span class="vvSearchLoading">Loading results...</span>');
+	searchResults.html('<span class="vvSearchLoading"><p>Loading results...</p><p>If page does not load within 30 seconds, refresh this page in your browser.</p></span>');
 	searchResults.hide();
 	var element = $(element);
 	var inputBox = element.find('input');
 	var button = element.find('button');
 	button.click(function(e) {
-		searchPanel.hide();
-		searchResults.show();
-		readabilityRequest(inputBox.val(), searchResults);
-	})
-	
+		if (inputBox.val().length > 0) {
+			if (!inputBox.val().match("^http")) inputBox.val('http://'+inputBox.val());
+			searchPanel.hide();
+			searchResults.show();
+			readabilityRequest(inputBox.val(), searchResults);
+		}
+	});
 }
 
 // end readability

@@ -96,36 +96,65 @@
 
 /* END ANNOTATOR.CSS */
 
+/* page stuff */
+body { margin: 0px; background: #eee; font-family: Helvetica, Arial, sans-serif; }
 
-body { margin: 0px; background: #eee; height: 100%;}
-html { height: 100%;}
-
+/* toolbar and buttons */
 .vvToolbar { height: 80px; width: 100%; background-color: #888; position: absolute; clear: both; top: 0; left: 0; padding: 10px; border-bottom: 3px solid #333;}
 .vvToolbarShadow { height: 100px;}
 .vvToolbar button { height: 80px; width: 100px; border-radius: 10px; border: 2px solid; padding: 5px; font-weight: bold; margin-right: 5px;}
-button:active {background: yellow;}
 .button-on { background: #F2F5A9 !important;}
 .annotator-button-on { background: #81DAF5; }
+.vvToolbar button:active {background: yellow;}
 
-.vvContent { padding: 10px; font-family: Helvetica, Arial, sans-serif; background: #eee;}
-.vvReadOverlay {padding: 10px; font-family: Helvetica, Arial, sans-serif; background: beige;}
+/* annotator custom classes */
 
+/* editor */
 .annotator-tagEditor { background: #CDD8E2 !important; padding: 5px !important; height: 55px !important;}
 .annotator-tagButton { float: left; display: block; height: 50px; width: 50px; padding: 0px; border: 0px solid silver; border-radius: 5px; margin-right: 10px; margin-top: 5px;}
 .annotator-star { border: 0px !important; }
 
+/* viewer */
 .annotator-badge-viewer { height: 30px; padding: 0px !important;}
 .annotator-badge-viewer img { height: 25px; width: 25px; padding: 0px !important;}
 .annotator-badge-viewer div { border: 0px !important; float: left; display: block; height: 25px; width: 25px; padding: 0px !important;}
 
-.vvPageElements { min-height: 100%; }
-.vvReviewSlides { height: 100%;}
+/* popup */
+.annotator-adder {
+	padding: 5px; padding-right: 0px; height: 84px !important; width: 176px !important; background: url('../images/annotator-bubble.png') !important; background-repeat: no-repeat !important;
+}
+.annotator-adder button, .annotator-adder div.speakButton {
+	vertical-align: middle; text-align: center; font-family:sans-serif; background: #bbb; font-size: small; width: 80px; height: 40px; text-indent: 0px !important; padding: 0px; float: left; margin-right: 5px;
+}
+
+/* annotator likes to hide the popup controls. */
+.annotator-controls { opacity: 1 !important; }
+.annotator-speakButton { padding: 0px !important;}
+.annotator-speakButton img { align: center;}
+
+/* styles for each page element */
+.vvReadabilityLookup {
+	padding: 40px;
+	font-size: 20px;
+}
+
+.vvReadabilitySearchForm, .vvReadabilitySearchButton {
+	padding: 10px;
+	font-size: 20px;
+} 
+
+.vvReadabilitySearchForm { width: 400px;}
+
 
 .vvReviewList {
 	margin: 0px; padding: 10px; font-family: Helvetica, Arial, sans-serif; background: #eee;
 } 
 
 .vvReviewList li {margin-bottom: 20px;}
+
+.vvContent { padding: 10px; font-family: Helvetica, Arial, sans-serif; background: #eee;}
+.vvReadOverlay {padding: 10px; font-family: Helvetica, Arial, sans-serif; background: beige;}
+
 
 /* slide */
 .vvReviewSlideContainer {
@@ -152,23 +181,8 @@ button:active {background: yellow;}
 .vvReviewNotesSidebar { float: right; width: 300px; padding: 20px; }
 .vvReviewSideNote { margin-bottom: 40px; background: #dee;}
 
-/* annotator likes to hide the popup controls. */
-.annotator-controls { opacity: 1 !important; }
-.annotator-speakButton { padding: 0px !important;}
-.annotator-speakButton img { align: center;}
-
-/* at first, show the main content view only 
-#vvReviewList, #vvReviewNotes, #vvReviewSlides, #vvReadOverlay, #vvBtnChangeIcons { display: none;}
-*/
-
 .readabilityInner {
 	text-align: justify;
 	width: 600px;
 }
 
-.annotator-adder {
-	padding: 5px; padding-right: 0px; height: 84px !important; width: 176px !important; background: url('../images/annotator-bubble.png') !important; background-repeat: no-repeat !important;
-}
-.annotator-adder button, .annotator-adder div.speakButton {
-	vertical-align: middle; text-align: center; font-family:sans-serif; background: #bbb; font-size: small; width: 80px; height: 40px; text-indent: 0px !important; padding: 0px; float: left; margin-right: 5px;
-}
