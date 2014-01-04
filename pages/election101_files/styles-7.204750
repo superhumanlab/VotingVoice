@@ -1,0 +1,513 @@
+/* Id: 7.204750.1374067756
+ * Generated: Jan 4, 2014 2:11:17 AM
+ */
+    * {margin:0;padding:0;}
+body, html {background:white !important;font-family: "Helvetica Neue",Helvetica,Arial,Sans Serif;}
+a {color: #222;text-decoration: underline;}
+a:hover { text-decoration:underline;color:#ee3923; }
+a:visited { color:#7a7a7a; }
+#overall{width:1000px;padding-top:0;margin:0 auto;}
+h1{clear:none;font-size:24px;margin:0;padding:0;}
+h2{clear:none;font-size:18px;margin:0;padding:0;}
+h3{clear:none;font-weight:700;font-size:14px;margin:0;padding:0;}
+h3 a {text-decoration: none !important;} 
+small{font-size:10px;font-weight:700;}
+.clear{clear:both;}
+#hometop .date{display:none;}
+
+/*-------------gen. layout styles------------------*/
+#midwrap{float:left;clear:none;width:700px;margin-top:10px;}
+#leftrail{float:left;width:180px;margin-right:10px;}
+#center-wide{float:left;padding-top:10px;width:670px;}
+#rightrail{float:right;width:300px;margin:0;}
+#topimage{width:100%;border-bottom:1px solid #DDD;margin-bottom:10px;}
+
+#leftrail {float: left;width: 180px;margin: 5px 10px 0 0;}
+#midwrap {float: left;clear: none;width: 700px;margin-top: 10px;}
+
+/*-------------header styles --------------*/ 
+#header {  float:left;  padding-top:35px;}
+
+#headerBar2011 {float:left;overflow:hidden;height:76px;width:728px;margin:0;}
+#boilerplate_wrap {position: absolute;top: 0;left: 0;right: 0;background: #EE3923; box-shadow: 0 6px 12px rgba(50, 50, 50, 0.33); }
+
+#top_boilerplate { width: 1000px;height: 25px;text-transform: uppercase;margin:0 auto;font-family: "Roboto Condensed",Arial Narrow,Helvetica,Arial; }
+#top_boilerplate form{ margin:5px auto; }
+#top_boilerplate p { float:left; clear:none; width:500px; font-size:12px; margin:6px 0 -1px; color: #FFF; }
+#top_boilerplate ul { float:right; clear:none; list-style:none; font-size:12px; margin:6px 0; }
+#top_boilerplate li { display:inline; margin:0 6px; }
+#top_boilerplate a{color:#FFF;text-decoration:none;}      
+#topleft_leaderboard {width:728px;height:90px;float:left;clear:none;margin:10px auto;}
+#topright_boilerplate {width:250px;height:178px;float:right;background:url('/polopoly_fs/7.204750.1374067756!/besty.jpg');-webkit-border-bottom-right-radius: 5px;-webkit-border-bottom-left-radius: 5px;-moz-border-radius-bottomright: 5px;-moz-border-radius-bottomleft: 5px;border-bottom-right-radius: 5px;border-bottom-left-radius: 5px;}
+#topright_boilerplate h3 {font-size:14px;margin:15px 10px 0 10px;color:#fff;}
+#topright_boilerplate p {font-size:10px;margin:2px 10px;color:#fff;}
+#topright_boilerplate ul {list-style:none;font-size:10px;margin:4px 10px;}
+
+#topright_boilerplate li {display:inline;margin:0 6px 0 0;text-transform:uppercase;}
+
+#topright_boilerplate a {color:#fff;font-weight:700;text-decoration:none;}
+#topright_boilerplate a:hover {text-decoration:underline;}
+
+#boilerplate { float:right; clear:none; margin:40px 60px 10px 10px; }
+#boilerplate p { text-align:right; color:#FFF; margin:0; }
+#boilerplate a { color:#FC0; }
+#boilerplate #inputter {border: 0px none !important; width: 115px !important; height: 18px !important;}
+#pencilbar {float:left;clear:none;width:1000px;min-height:0;max-height:35px;background:#ffffff;margin-bottom:5px;}
+#pencilbar div {float:left !important;clear:none;text-align:center;}
+.fb_edge_widget_with_comment {position: relative;float: left;margin: 0 5px 0 0;}
+
+/*---------------------search styles--------------------*/
+
+#searchbox {float:right;clear:none;margin:5px auto;width:350px;}
+#searchbox #buttons{float:right;clear:none;margin:5px 40px 5px 5px;height:24px; width:240px;}
+#searchbox #buttons img{margin:1px ;}
+#searchbox form {float:right;height:32px;overflow:hidden;}
+#searchbox form #inputter {border:1px solid #666666;height:26px;padding-left:5px;width:300px;background:url('/polopoly_fs/7.204750.1374067756!/bg_searchsubmitter_blank.jpg') no-repeat scroll left center rgb(255, 255, 255) !important;}
+#searchbox form #submitter {background: none repeat scroll 0 0 #FFCC00;border: 0 none;font: bold 12px "Helvetica Neue", Helvetica, Arial;height: 30px;text-transform: uppercase;width: 30px;}
+
+/*----------------navigation styles-------*/
+#topNavBar {display:block;text-align:left;width:1000px;min-width:1000px;white-space:nowrap;height:35px;background:#fff;}
+#topNavs {    float:left; display:block; text-align:left; width:998px; min-width:998px; white-space:nowrap; height:67px; background:#fff;    clear:none; margin:8px 0 0;}
+
+.newmenu ul {width: 999px;min-width: 999px;font:400 19px/19px "Roboto Condensed",Arial Narrow,Helvetica,Arial;float: left;height: 32px;margin: 0;padding: 0;text-transform: uppercase;background: #222;}
+.newmenu li { display:inline; margin:0; padding:0; 
+}
+
+.newmenu li a {float: left;text-decoration: none;border-right: 2px solid #fff;height: 32px;background: none;color: white;padding: 6px 6px;-moz-transition-property: background;-moz-transition-duration: .5s;-webkit-transition-property: background;-webkit-transition-duration: .5s;-o-transition-property: background;-o-transition-duration: .5s;-ms-transition-property: background;-ms-transition-duration: .5s;transition-property: background;transition-duration: .5s;font-weight: normal;}
+.newmenu li a:hover { background:#ee3923;  color:#fff;}
+
+.tabcontainer { clear:left; width:95%;}
+
+#level2navs {background: none repeat scroll 0 0 white;float: left;clear: none;margin: 0;padding: 6px 0;width: 1000px;border-bottom: 1px solid #666;height: 22px;}
+#level2navs li {  list-style:none;  display:inline;}
+#level2navs a { font-family:Helvetica, Arial, sans-serif; text-transform:uppercase; color:#666; text-decoration:none; letter-spacing:.0; font-size:.7em; font-weight:700; margin:0 .5em;}
+
+#subNavs {float:left;width:100%;border-bottom:1px solid #aaa;}
+#subNavs ul {margin:6px 0;padding:0;}
+#subNavs ul li {display:inline;text-transform:uppercase;font-size:11px;margin:0 0.7em 0 0;}
+#subNavs a {font-weight:700;}
+
+#level2navs a:hover { color:#ee3923; text-decoration:none;}
+
+
+*:first-child+html .ieclass,* html .ieclass {margin-top:-1em;}
+
+
+/* -----------------------left rail styles---------------------*/
+
+#leftrail { width:180px; }
+#leftrail .sectionheader {background: #FFF;color: #222;text-transform: uppercase;padding: 5px 10px;letter-spacing: 1px;margin: 6px auto !important;text-align: center;float: left;clear: both;position: relative;width: 148px;border: 1px solid #AAA;font: 700 14px/14px "Holtwood One SC",Helvetica,Arial,sans-serif !important;}
+#leftrail .deptheader:before { content:"Departments"; }
+#leftrail .seriesheader:before { content:"Series";  }
+#leftrail div.spotlight { float:left; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:13px; margin: 5px 10px 15px 0px; width:150px; height:310px;width:170px; height:30px; margin:0; }
+#leftrail div.blogheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px 0px;width:170px; height:30px; margin:0;  }
+#leftrail div.commentheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -90px;width:170px; height:30px; margin:0;  }
+#leftrail div.shortheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -120px;width:170px; height:30px; margin:0;  }
+#leftrail div.issueheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -150px;width:170px; height:30px; margin:0;  }
+#leftrail div.authorheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -180px;width:170px; height:30px; margin:0;  }
+#leftrail div.aboutheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -210px;width:170px; height:30px; margin:0;}
+#leftrail div.findheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -240px;width:170px; height:30px; margin:0;}
+#leftrail div.blogsheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -270px;width:170px; height:30px; margin:0; }
+#leftrail div.noiseheader { background:url('/polopoly_fs/7.204750.1374067756!/bg_leftheaders.png') repeat-x; background-position:0px -300px;width:170px; height:30px; margin:0;}
+#leftrail .departments {list-style-type:none;margin-bottom:20px;font:400 16px/20px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;}
+#leftrail .departments li {margin:0 0 2px 0;}
+#leftrail .image {margin:0;padding:0;}
+#leftrail .image img {margin:0;padding:0;}
+#leftrail img { border:0; margin:10px 0 -2px 0; }
+#leftrail h1 { font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; font-weight:700; margin:0; text-transform:uppercase; padding-bottom:2px; border-bottom:1px solid#ddd; float:left; width:170px; }
+#leftrail h2 {background: #FFF;color: #222;text-transform: uppercase;padding: 5px 10px;letter-spacing: 1px;margin: 6px auto !important;text-align: center;float: none;clear: both;position: relative;width: 150px;border: 1px solid #AAA;font: 700 14px/14px "Holtwood One SC",Helvetica,Arial,sans-serif !important;}
+#leftrail p { color: #222;font: 400 13px/17px Georgia,Times New Roman,serif; margin:3px 0;}
+#leftrail p a {font: 400 14px/16px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;}
+#leftrail p.moreblogs { float:right; clear:none; margin-top:-22px; font-size:10px; }
+#leftrail div { float:left; clear:none; width:170px; text-align:left; background:#fff; overflow:hidden; margin:0 0 10px 0; }
+#leftrail div img { border:0; margin:10px 0; }
+#leftrail .button { border:0; margin:0; }
+#leftrail div ul { margin:0; padding:0; }
+#leftrail div li { list-style:none; margin-bottom:5px; }
+#leftrail div h4 { color:#222; margin:4px 0; }
+#leftrail div h5 { color:#222; margin:1px 0; }
+#leftrail div select { width:160px; font:11px Helvetica, Arial, sans-serif; margin:2px 0; }
+#leftrail #searchBox { background:url(/images/bg_searchworks.png); float:left; clear:none; width:200px; height:125px; margin-top:0; }
+#leftrail #searchStoryBox { background:url(/images/bg_searchstories.png); float:left; clear:none; width:200px; height:150px; margin-top:0; }
+#leftrail p.bodyText { font-size:12px; font-family:Georgia, Times New Roman, serif; color:#232323; line-height:18px; text-align:left; }
+#leftrail div h2,#leftrail div h3 { margin:2px 0; }
+#leftrail div form,#leftrail div input { font:11px Helvetica, Arial, sans-serif; margin:2px 0; }
+#leftrail #searchBox p, #leftrail #searchStoryBox p { margin:5px 10px 2px; }
+#leftrail #searchBox h3, #leftrail #searchStoryBox h3 { margin:5px 10px; }
+#leftrail #searchBox select, #leftrail #searchStoryBox select { margin:2px 10px; }
+#leftrail #covergallery { background:url('/polopoly_fs/7.204750.1374067756!/bg_covers.png') repeat-x; width:170px; height:170px; }
+#leftrail #covergallery .gallery { background:none; margin:0; padding:0; }
+#leftrail #covergallery .gallery img { width:120px; height:120px; margin:25px; }
+#leftrail #covergallery_new {width: 170px;height: 180px;background:#000;}
+#leftrail #covergallery_new p{color: #FFF;font: 400 16px/16px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;margin: 8px auto 0 auto;text-align: center;}
+#covergallery_new .gallery {background: #000;}
+#leftrail .gallery img {border: 4px solid #FFF;width: 120px;height: 120px;margin: 10px 22px;}
+#leftrail #untitled { background-image: url('/polopoly_fs/7.204750.1374067756!/bg_untitled.png'); width:170px; height:170px; }
+#leftrail #untitled .gallery { background:none; margin:0; padding:0; }
+#leftrail #untitled .gallery img { width:120px; height:120px; margin:25px; }
+#leftrail #gimmeshelter { background-image: url('/polopoly_fs/7.204750.1374067756!/bg_gimmeshelter.png'); width:170px; height:220px; margin:15px; }
+#leftrail #gimmeshelter .image {border:5px solid white;margin:50px 20px 0;width:120px;}
+#leftrail #gimmeshelter .image img { border:0; margin:0; padding:0; }
+#leftrail #responible { background:url('/polopoly_fs/7.204750.1374067756!/bg_responible.jpg') repeat-x; width:170px; height:185px; margin:10px 0; }
+#leftrail #responible .gallery { border:5px solid white; width:120px; height:120px; margin:30px 20px 5px 20px; }
+#leftrail .gallery img { width:120px; height:120px; }
+#leftrail #responible .gallery img { margin:0; padding:0; }
+#leftrail #responible p { text-align:center; font-size:11px; text-transform:uppercase; }
+#leftrail div.teaserman { margin:0; }
+#leftrail div.secitems { margin:0; }
+#leftrail .galleryhead {margin: 10px auto 0 auto !important;border-bottom: 0;background: #222;color: #FFF !important;border: none;font: 400 16px/16px "Roboto Condensed",Arial Narrow,Helvetica,Arial !important;width: 150px;}
+
+
+/*#mostreaddiv { float:left; clear:none; margin:30px 0; }
+#mostreaddiv div, #mostreaddiv ul { width:170px; margin:0 0 0 15px; }
+#mostreaddiv #skyscraper { float:left; clear:none; width:160px !important; height:600px; margin:0; }
+#mostreaddiv #gimmeshelter { background-image: url('/polopoly_fs/7.204750.1374067756!/bg_gimmeshelter.png'); width:170px; height:220px; margin:15px; float:left; clear:none; }
+#mostreaddiv #gimmeshelter .image {border:5px solid white;margin:50px 20px 0;width:120px;}
+#mostreaddiv #gimmeshelter .image img { border:0; margin:0; padding:0; }*/
+
+/*|||||||||||||||||||||||||||||||||||||---GUT STYLES---||||||||||||||||||||||||||||||||||||||||*/
+#gut{float:left !important;position:relative;width:1000px;padding-top:0;background:#FFF;margin:0 auto;}
+
+/*----------------------teasers -----------------------*/
+#whatshot {text-align: center;display:table;background: #fff;font-family: "Holtwood One SC",Arial Narrow,Helvetica,Arial;color: #222;font-size: 24px;line-height: 24px;text-transform: uppercase;padding:8px 5px;width: 290px;margin: 0;position: relative;letter-spacing: 1px;}
+#featured_header, #center .sectionheader {box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-moz-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-webkit-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);background:#fff;border:1px solid #AAA;clear:both;color: #222;display:table;float:none;font: 400 20px/20px "Holtwood One SC",Helvetica,Arial,sans-serif !important;letter-spacing: 1px;margin: -45px auto 15px auto !important;padding:5px 10px;position: relative;text-align: center;text-transform: uppercase;width: 300px;}
+#center .featured_column .sectionheader {box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-moz-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-webkit-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);background:#fff;border:1px solid #AAA;clear:both;color: #222;display:table;float:none;font: 400 14px/14px "Holtwood One SC",Helvetica,Arial,sans-serif !important;letter-spacing: 1px;margin:0px auto !important;padding: 5px 10px;position: relative;text-align: center;text-transform: uppercase;width: 180px;}
+#featured_header {margin: 25px auto -5px auto !important;width: 340px;padding: 5px;}
+#featured {width:1000px;margin:0 0 18px 0;clear:both;float:left;padding:0;-webkit-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-moz-box-shadow:0px 7px 14px rgba(50, 50, 50, 0.61);box-shadow:0px 7px 14px rgba(50, 50, 50, 0.61);}
+#featured .teaser {margin: 0 -1px 0 0;float: left;width: 225px;border: 1px solid #AAA;padding: 12px;height: 218px;}
+#featured .teaser .head {overflow: hidden;font-size: 16px;line-height: 20px;width: 225px !important;padding: 12px 0;height: 40px;margin: 167px 0 0;position: relative;}
+#featured .teaser img {width: 225px;height: 168px;margin: -230px 0 0;display: block;border:0;}
+#featured, #featured_secondary, #featured_head, #featured_inline, #featured_column {font-family:"Roboto Condensed",Helvetica,Arial,sans-serif;text-transform:uppercase;}
+#featured p, #featured_secondary p, #featured_head p {display:none;}
+#featured a, #featured_secondary a, #featured_head a {font-weight:400 !important;color:#222;text-decoration:none;}
+#featured a:hover, #featured_secondary a:hover, #featured_head a:hover {color:#EE3923;}
+
+#featured_secondary {width:680px;margin:10px 0 0 0;clear:both;float:left;padding-bottom:10px}
+#featured_secondary .teaser {margin-right:15px;float:left;width:210px;border-bottom:0 !important;display:inline;}
+#featured_secondary .teaser .head {overflow:hidden;position:relative;font-size:18px;width:200px;padding:5px;height:40px;margin:100px 0 0 0;line-height:20px;}
+#featured_secondary .teaser img {width:210px;height:160px;margin:-160px 0 0 0;}
+
+.featured_column {width: 238px;margin: 0;float: left;padding-bottom: 20px;}
+.column1 {margin-right:14px;}
+#center #spotlights .featured_column_list .teaser {float:left;width:210px;color: #333;font: 400 13px/17px Georgia, 'Times New Roman', serif;margin: 0;padding: 0;}
+#center #spotlights .featured_column_list .teaser p {color: #333;font: 400 13px/17px Georgia, 'Times New Roman', serif;}
+#center .featured_column_list .teaser .head {overflow: hidden;position: relative;width: 210px;padding: 0 0 10px 0;height: 44px;margin: 0;font: 300 22px/24px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;}
+#center .featured_column_list .teaser .head a{text-decoration:none;}
+.featured_column_list img {width:210px;height:160px;margin:0 0 10px 0;}
+.featured_column #featured_inline {width: 230px;margin: 0;float: left;padding-bottom: 5px;border-bottom: 1px dotted #aaa;}
+.featured_column_list {float: left;clear: none;margin: -10px 0 0 0 !important;padding: 20px 13px 14px 13px;border: 1px solid #AAA;height:600px;}
+.featured_column .viewall {text-align: center;margin: 0;font-weight: 700;font-size: 12px;text-transform: uppercase;color: #FFF;letter-spacing: 1px;background: #AAA;padding: 4px 5px;width: 228px;float: left;}
+.featured_column_wrap {}
+.featured_column .readmore {margin: 5px 0;border: 0;padding: 0;text-transform: uppercase;font: 400 13px/13px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-decoration:none;}
+
+#featured_inline {width: 470px;margin: 10px 0 0;float: left;padding-bottom: 5px;border-bottom: 1px dotted #aaa;}
+#featured_inline .teaser {margin: 0;float: left;width: 220px;border-bottom: 0 !important;display: inline;height: 160px;padding: 0;}
+#featured_inline .teaser .head {overflow: hidden;position: relative;font: 300 26px/26px "Roboto Condensed",Arial Narrow,Helvetica,Arial;width: 235px;padding: 5px;height: 60px;margin: 0px 0 0 230px;}
+#featured_inline .teaser img {width: 220px;height: 160px;margin: -75px 0 0 0;border:1px solid #999;}
+#featured_inline p {margin: -80px 0 0 235px;width: 235px;text-transform: none;font: 400 13px/17px Georgia,Times New Roman,serif;}
+#featured_inline .readmore {display: inline;margin: 0;border: 0;padding: 0;font-size: 11px;text-transform: uppercase;float:none;}
+
+#featured_head {width:1010px;margin:10px 0 0 0;clear:both;float:left;padding-bottom:10px}
+#featured_head .teaser {margin-right:12px;float:left;width:190px;border-bottom:0 !important;display:inline;}
+#featured_head .teaser .head {overflow:hidden;position:relative;font-size:18px;width:180px;padding:5px;height:40px;margin:90px 0 0 0;line-height:20px;}
+#featured_head .teaser img {width:190px;height:140px;margin:-140px 0 0 0;}
+
+/* -----------------------hometop -------------------------*/
+
+#hometop {margin: 0 !important;width: 680px;border-bottom: 0;padding: 0;margin-bottom: 0;float: left;}
+#hometop h1 { font: 700 30px/30px "Holtwood One SC",Helvetica,Arial,sans-serif !important;float: left;width: 100%;text-transform: uppercase;margin: 20px 0 10px 0;border-bottom: 1px solid #aaa;padding-bottom: 10px; text-indent:0;height:32px;}
+#hometop h2 { font: 700 24px/24px "Holtwood One SC",Helvetica,Arial,sans-serif !important;float: left;text-transform: uppercase;margin: 10px 0; }
+#hometop h2 { font: 700 18px/18px "Holtwood One SC",Helvetica,Arial,sans-serif !important;float: left;text-transform: uppercase;margin: 10px 0; }
+#hometop p { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:16px; }
+#hometop .header h1 {display:none;}
+#hometop .image {float:left;clear:none;margin:5px 10px 0 0;}
+#hometop .sectionheader {display:none;}
+#hometop ul.deptlinks {list-style: none;border-bottom: 1px solid #666;border-top: 1px solid #666;padding: 10px 0;margin:5px 0;float: left;width: 100%;clear: both;}
+#hometop ul.deptlinks li {display: inline;font: 400 12px/12px "Holtwood One SC",Helvetica,sans-serif;text-transform: uppercase;}
+#hometop ul.deptlinks a {color:#EE3923;}
+#hometop ul.deptlinks li:after {content:" | ";}
+#hometop ul.deptlinks li:first-child:after {content:none;}
+#hometop ul.deptlinks li:last-child:after {content:none;}
+
+/*-------------to accomodate blog post element --------------*/ 
+#hometop .secitems {float:right;margin:0 0 0 15px;border-left:1px dotted #666;padding-left:10px;width:250px;}
+#hometop .secitems  ul {padding:0;}
+#hometop .secitems ul li {list-style:none;margin:10px 0;}
+#hometop .secitems .teaser a {font: 400 15px/18px "Roboto Condensed",Arial Narrow,Helvetica,Arial;color: #222;text-transform: uppercase;}
+#hometop .secitems .teaser a:hover {color:#EE3923}
+#hometop .secitems .teaser .article {color:#333;font:400 13px/17px Georgia,Times New Roman,serif;height:36px;overflow:hidden;}
+#hometop .sidebarHeader {float:left;clear:none;margin:0 0 10px 0;color:#666;text-transform:uppercase;width: 657px;text-align: right;font-size: 14px;}
+#hometop #list {padding-bottom:10px;margin:10px 0;border-bottom:1px dotted #666;width:100%;}
+#hometop .narrow_list {width:400px;}
+#hometop #list .teaser { border-width: 0; color: #333; display: inline-block;font: 400 13px/17px Georgia,Times New Roman,serif;margin-bottom: 0; padding: 5px 0; position: relative;}
+#hometop #list .teaser h3 {font: 300 26px/26px "Roboto Condensed",Arial Narrow,Helvetica,Arial;margin: 0 0 5px;text-transform:uppercase;}
+#hometop #list .teaser img {float:left;margin:0 10px 10px 0;}
+ul.navpath {font:400 12px/12px "Roboto Condensed",Helvetica,Arial,sans-serif;list-type-style:none;text-transform:uppercase;padding-bottom: 10px;border-bottom: 1px solid #aaa;float:left;width:100%;}
+ul.navpath li {display:inline;}
+ul.navpath li:after {content:" > ";}
+ul.navpath li:last-child:after {content:"";}
+ul.navpath li:first-child {display:none;}
+ul.navpath li:nth-child(2):before {content:"You are here: ";}
+ul.navpath .separator {display:none;}
+
+#spotlights #list {float: left;clear: none;margin:20px 0 30px 0 !important;width: 468px !important;padding: 30px 10px 10px;border: 1px solid #aaa;}
+#spotlights .featured_column #list {float: left;clear: none;margin:0 !important;width: 210px !important;padding: 10px;border: 1px solid #aaa;}
+
+#center { float:left; width:485px; margin:0; }
+#center .teaser { border-width:0;display:inline-block; font-size:.75em; line-height:15px; padding:5px 0; position:relative; color:#333; margin-bottom:0; width:475px;}
+#center ul.teaser { border-bottom:0 none; margin:0; padding:0 0 10px; }
+#center .teaser li { font:400 13px/17px Georgia,Times New Roman,serif; list-style:none; margin:7px auto; color:#333; }
+#center .teaser li a {font:300 16px/20px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform:uppercase;text-decoration:none;}
+#center li { font-size:12px; line-height:15px; list-style:none; margin:6px auto; }
+#center .teaser h1 { font-size:18px; line-height:21px; font-weight:light; clear:both; }
+#center .teaser h3 { font-size:14px; line-height:16px; margin:0; }
+#center .teaser .head { font-size:18px; line-height:21px; font-weight:light; clear:both; margin:5px 0; }
+#center .teaserpic { float:left; clear:both; margin:0 5px 5px 0; }
+#center img.thumb { background-color:#999999; border:0 solid #B7DF60; clear:none; float:left; margin:0 10px 5px 0; width:100px;height:100px;}
+#center #mainBody { float:left; clear:none; background:#fff; margin:10px 0; }
+#center #mainBody .sectionheader { background:none repeat scroll 0 0 #CC3300; clear:none; color:#FFFFFF; font:700 14px/16px Helvetica; margin-top:0; padding:5px; text-transform:uppercase; width:475px; }
+#center #mainBody #list { width:100%; border:0px solid #ccc; margin-bottom:15px; }
+#center #mainBody h1 { font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:32px; font-weight:lighter; }
+#center #mainBody p { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:13px; }
+#center #mainBody blockquote { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; margin:5px 20px; }
+#center #mainBody .teaser { margin:0px; border:0px; width:100%; }
+#center #spotlights .sectionheader { margin-bottom:10px; font:700 14px/16px "Helvetica Neue",Helvetica,Arial,sans-serif }
+#center #spotlights ul.teaser { border-bottom:0 none; margin:0; padding:0 0 10px; }
+#center #spotlights #list { float:left; width:490px; margin:10px 0 0 0; }
+#center #spotlights #list h3 {font: 300 22px/24px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;}
+#center #spotlights .wpfeed p { font:500 11px/13px Arial,Helvetica,sans-serif; margin:5px 0 2px 0; }
+#center #spotlights .spotlight { margin:0px 10px 15px 0; }
+#center #spotlights .spotlight h3 { margin:0; font-size:14px; line-height:16px; }
+#center .blogfeed {  }
+#center .blogfeed p { font-size:12px; margin:5px 0; }
+#center .eventList {  padding: 15px 0 0 0 !important;border:0;}
+#center .critpicks {  width: 490px;min-height: 40px;margin-top: -20px;background:#FFF2F0;}
+
+#center .teasermain .teaser li {font: 400 17px/20px "Roboto Condensed",Arial Narrow,Helvetica,Arial;list-style: none;margin: 8px auto;color: #333;border-top: 1px solid #AAA;padding: 5px 0;  max-height: 73px;overflow: hidden;}
+
+#center #list .teaser {border-width: 0;display: inline-block;padding: 5px 0;position: relative;color: #333;margin-bottom: 5px;width: 468px;border-bottom: 1px solid #AAA;font: 400 13px/17px Georgia,Times New Roman,serif;}
+#center .critheader { margin: 0 auto !important;}
+.viewall {text-align: center;margin: -48px 0 20px 0;font-weight: 700;font-size: 12px;text-transform: uppercase;color: white;letter-spacing: 1px;background: #AAA;padding: 4px 5px;width: 480px;float: left;}
+a.viewall {color:#fff;text-decoration:none;}
+a.viewall:hover {background:#ee3923;}
+
+.bullet {color: #EE3923;font-weight: bold;text-transform: uppercase;font-family: "Holtwood One SC",Helvetica,sans-serif;font-size: 11px;}
+.readmore {float:left;margin-bottom:20px !important;border-width:1px 0;border-style:dotted;border-color: #666;padding:8px 0;width:490px;}
+
+
+#about { float:right; width:200px; background:#B7DF60 url('/images/alts/the570alsmall.gif') no-repeat; padding-right:10px; padding-top:25px; font-size:10px; font-weight:700; text-align:right; }
+.container .author { font:14px Helvetica, Arial, sans-serif; color:#666; margin:0; }
+.container .columntitle { border-bottom:1px solid #ddd; padding-bottom:2px; margin-bottom:10px; }
+.container .date{ font:11px Helvetica, Arial, sans-serif; color:#666; margin:0; text-transform:uppercase; margin:1px auto; }
+.container h1 { font:24px/28px Helvetica, Arial, sans-serif; color:#666; font-weight:400; margin:2px 0; }
+.container h2 { font:16px/22px Helvetica, Arial, sans-serif; color:#333; margin-bottom:5px; }
+.container p { font-size:12px; font-family:Georgia, Times New Roman, serif; color:#232323; line-height:18px; text-align:left; }
+.container p.imagecaption { font-size:12px; font-family:Helvetica,Arial,sans-serif; color:#333; font-style:normal; text-align:left; }
+.container p.source { font-size:10px; font-family:Helvetica,Arial,sans-serif; color:#666; font-style:normal; text-transform:uppercase; text-align:right; letter-spacing:.75px; margin:2px 0; }
+.storyimage {background:#fff;}
+
+/*-----top of story styles------*/ 
+
+#article .author { font:14px Helvetica, Arial, sans-serif; color:#666; margin:0; }
+#article .columntitle p { box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-moz-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);-webkit-box-shadow: 0px 7px 14px rgba(50, 50, 50, 0.61);background: #FFF;border: 1px solid #AAA;clear: both;color: #222;display: table;float: none;font: 400 16px/16px "Holtwood One SC",Helvetica,Arial,sans-serif !important;letter-spacing: 1px;margin: 10px auto -15px auto;padding: 5px 8px;position: relative;text-align: center;text-transform: uppercase;min-width: 300px;color: #222;}
+#article .columntitle {border-bottom: 1px solid #AAA;padding-bottom: 0;margin-bottom: 30px;}
+#article .date{ font:11px Helvetica, Arial, sans-serif; color:#666; margin:2px 0 10px 0; text-transform:uppercase; }
+#article h1 { font: 300 28px/32px "Roboto Condensed",Arial Narrow,Helvetica,Arial;color: #222;margin: 15px 0;text-transform: uppercase;}
+#article h2 { font: 300 18px/22px "Roboto Condensed",Arial Narrow,Helvetica,Arial;color: #222;margin: -10px 0 15px 0;}
+
+.imagecaption { font-size:12px; font-family:Helvetica,Arial,sans-serif; color:#333; font-style:normal; text-align:left; }
+.source { font-size:10px !important; font-family:Helvetica,Arial,sans-serif; color:#666; font-style:normal; text-transform:uppercase; text-align:right; letter-spacing:.75px; margin:2px 0; }
+.article ol li { font-size:12px; font-family:Helvetica, Arial, sans-serif; color:#232323; line-height:18px; text-align:left;margin:0 0 10px; }
+.inline_image { float:left;clear:none;margin:0 10px 10px 0; }
+
+/*----body text styles -----*/ 
+
+#articlecontainer h1 { font:24px/28px Helvetica, Arial, sans-serif; color:#666; font-weight:400; margin:2px 0 10px 0; }
+#articlecontainer h2 { font:16px/22px Helvetica, Arial, sans-serif; color:#333; margin:20px 0 0 0; }
+#articlecontainer p { font:400 13px/20px Georgia, Times New Roman, serif; color:#232323;text-align:left;margin:0 0 10px; }
+#articlecontainer li { font-size:12px; font-family:Georgia, Times New Roman, serif; color:#232323; line-height:18px; text-align:left;margin:0 0 5px; }
+#articlecontainer blockquote {margin:5px 15px;font-size:10.5px;line-height:15px;}
+#articlecontainer blockquote h3 {margin-bottom:10px;}
+#articlecontainer p.letterwriter {text-align:right;font:11px/14px Helvetica,Arial,sans-serif;}
+#adtspot { position:relative; width:300px; height:250px; background-color:#CCC; }
+.bloglist p { font-size:11px; margin:4px 0; }
+.blogfeed p {color:#666;}
+.meridian {text-transform:uppercase;font-size:10.5px;}
+#articlebottom #list { border:1px solid #ccc; float:left; clear:none; margin:15px 0; padding:15px; width:620px; }
+#articlebottom #list .sectionheader { font:400 14px/14px "Holtwood One SC",Helvetica,Arial,sans-serif !important; clear:none; margin:0 0 10px 0; padding:0;text-transform:uppercase;letter-spacing:.05em; }
+/*#calendar { float:left; margin-top:0; width:300px; }*/
+#caltop { width:280px; }
+.calday { width:25px; float:left; display:inline-block; background-color:#B7DF60; font-size:18px; color:#76827B; font-weight:700; text-align:center; margin:0 5px 0 0; padding:5px; }
+.categorylinks { float:left; border-right:1px solid #E6E7E8; padding:0 10px; }
+#categoriesdiv { position:relative; width:1040px; color:#E6E7E8; margin:0 auto; }
+#columns { position:relative; top:0; width:300px; }
+#columns { position:relative; top:0; width:300px; }
+#commentpolicy {display:none;}
+#contentMain { position:relative; width:100%; background-color:#FFF; padding:10px; margin:10px 10px 10px 0; }
+#feedMain p { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:15px; margin:5px 0; }
+#footer #restaurants,#contentMain,.sectionheader,#varsitydiv .sectionheader { border:0; }
+.gallery {clear:none;float:left;margin:5px 15px 5px 0;width:250px;}
+.gallery .thumb {width:250px;}
+#highlightnav {float:right;clear:none; width:45%; }
+#highlights, #spotlights { float:left; clear:none; margin:0;width:490px }
+.highlight { background:#FFF; }
+.highlightselected { font-size:14px; }
+.highlightstory { float:left; clear:none; width:50%; margin-right:10px; }
+.item { background-color:#FFF; padding:5px; }
+.item_alt { background-color:#E6E7E8; padding:5px; }
+#list { float:left; }
+#nav { float:left; margin-top:20px; width:720px; font-size:14px; font-weight:700; letter-spacing:-1px; }
+#navcats a:link,#navcats a:active,#navcats a:visited { color:#76827B; }
+#navcats { float:left; background:#B7DF60; color:#76827B; margin-right:2px; padding:1px 20px 1px 40px; }
+#photosdiv { float:left; clear:none; margin-top:10px; }
+#restaurants { position:relative; width:100%; background-color:#FFF; padding:10px; margin:10px 10px 10px 0; }
+#searchfield { float:left; width:198px; background:#FFF; text-align:right; padding:1px 10px 1px 1px; }
+.searchbutton { font-size:10px; float:left; width:57px; background-color:#B7DF60; text-align:center; padding:4px 4px 2px; }
+.sectionheader { font:700 18px/20px Helvetica, Arial, sans-serif; clear:none; color:#cc3300; margin:0 0 10px 0; padding:0;text-transform:uppercase;letter-spacing:.05em; }
+.sectionheader a:link,.sectionheader a:active,.sectionheader a:visited {text-decoration:none;cursor:auto;}
+.sectionheader a:hover { text-decoration:underline;cursor:auto;color:#ee3923;}
+#articlebottom .viewall { float: right;margin-top: 3px;font-weight: 700;font-size: 10px;text-transform: uppercase;color: #FFF;letter-spacing: 1px;background: #EE3923;padding: 5px;margin: 0;width: 200px;}
+#articlebottom .viewall a, .viewall a:link,.viewall a:active,.viewall a:visited { text-decoration:none;color:#fff;}
+#articlebottom .viewall a:hover { text-decoration:underline;color:#fff;}
+#share { margin: 0px 0 10px 0;float: left;clear: both;background: #FFF;padding: 10px;width: 650px;border: 1px solid #AAA;}
+#share a{ text-decoration:none}
+#share .at-button {float: left;font-family:Arial,Helvetica,sans-serif; font-size:11px;letter-spacing: 0.1em;margin: 2px 15px;text-transform: uppercase;}
+#spotlights blockquote { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:16px; margin:5px 20px; }
+#spotlights h1 { font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:32px; font-weight:lighter; }
+#spotlights h3 { font-family:Arial,Helvetica,sans-serif; font-size:18px; line-height:22px; font-weight:lighter;margin:20px 0 0 0;}
+#spotlights p { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:16px; margin:0;}
+#spotlights p.viewmore {font: 700 12px/12px "Holtwood One SC",Helvetica,Arial,sans-serif;margin: 10px;text-transform: uppercase;}
+.spotlight .bullet { font-weight:bold; text-transform:uppercase; }
+.spotlight h3 { font: 400 16px/16px "Roboto Condensed",Arial Narrow, Helvetica;text-transform: uppercase;margin-bottom:8px; }
+.spotlight img { background-color:#CCC; border:0px solid #666; margin-bottom:10px; width:150px; height:150px; }
+.spotlight { width:150px; float:left; margin:10px 17px 5px 0; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:13px; height:300px;overflow:hidden; }
+#storyrail { float:left; width:335px; margin-right:15px; margin-top:0; margin-bottom:5px; }
+#storyrail .gallery {text-align:center;clear:none;float:left;margin:5px 15px 5px 0;padding:5px 0 25px 0;width:335px;background:#366469;border-radius:5px;-moz-border-radius:5px;}
+#storyrail .gallery a {color:white;text-decoration:none;margin:5px 0;font-size:11px;}
+#storyrail .gallery .thumb {width:280px;border:10px solid #fff;margin-top:5px;-moz-box-shadow: 0px 15px 10px -10px #111;}
+#subject {border:1px solid #ccc;border-width:1px 0 1px 0;margin:10px 0;padding:5px 0;}
+#subject p { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:14px;margin:1px 0; }
+#subject h3 { color:#333333; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:16px;margin:1px 0; }
+#tooltip h3,#tooltip div { margin:0; }
+#tooltip { position:absolute; z-index:3000; border:1px solid #B7DF60; background-color:#76827B; opacity:0.9px; color:#B7DF60; width:150px; padding:5px; }
+#topLeaderboard { display:block; height:90px; width:1000px; min-width:1000px; text-align:left; overflow:hidden; margin:10px auto; }
+#topRight {width:250px;height:90px;float:right;clear:none;margin-left:10px;}
+.ui-tabs-panel .sectionheader { display:none; }
+.smallDate{ font-size:10px !important; text-transform:uppercase; margin:1px 0; }
+.date{ font-size:10px !important; text-transform:uppercase; margin:1px 0; }
+.datefield{ font-size:10px !important; text-transform:uppercase;color:#333; }
+.ui-tabs-panel {float: left; margin-bottom: 15px; width: 278px;}
+li.dsq-widget-item { clear:both; list-style-type:none; margin:5px 0 !important;overflow:hidden; }
+
+/* -------AddThis Vertical Layout Menu-------- */ 
+.addthis_toolbox .vertical { background: #fff; width: 136px; padding: 1px; }
+.addthis_toolbox .vertical a { font-size:11px; position: relative; display: block; background: #fff; width: 102px; padding: 4px 0 4px 34px; text-decoration: none; }
+.addthis_toolbox .vertical a:hover { background: #f5f5f5; color: #027999; text-decoration: none; -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+.addthis_toolbox .vertical span { position: absolute; left: 14px; top: 4px; }
+.addthis_toolbox .vertical .more { border-top: solid 1px #eee; padding: 10px 0 0 0; margin: 10px 10px 0 10px; text-align: center; }
+.addthis_toolbox .vertical .more a { padding: 4px 0; margin: 0; }
+.addthis_toolbox .vertical .more a:hover { background: none; }
+.addthis_toolbox .vertical .more span { display: none; }
+
+/*------footer styles-------*/
+
+#footer {width:998px;margin:0 auto;text-align:left;background-color:#fff;}
+#footer h2, #footer h3 {font-family:"Roboto Condensed",Helvetica,Arial,sans-serif;text-transform:uppercase;}
+#footer h2 {font-size: 24px;font-weight: normal;margin:0 0 5px 0;}
+#footer h3 {font-size: 14px;margin: 6px 0;text-transform: uppercase;font-weight: 700;}
+#footer ul {list-style: none;float: left;margin-right: 20px;padding-right: 20px;border-right: 1px solid #bfbfbf; }
+#footer ul li {list-style: none;margin-bottom: 2px; }
+#footer ul li a {color: #ee3923;text-decoration:underline; }
+#footer ul li a:hover, footer ul li a:active {color: #ee3923;text-decoration:underline; }
+.footerCol {width:160px;float:left;}
+.footerCol h2 {font-size:.9em;color:#666;margin:10px 0 2px 0; }
+.footerCol p {font-size:.7em;margin:1px auto;}
+.footerCol a {color:#666; text-decoration:none}
+#siteInfo {display:block;width: 1044pxpx; }
+#siteInfo img {position: absolute;top: -14px; }
+#siteInfo ul {float: none;border: 0;text-align: right;position: relative;top: 35px;margin: 0;width: 100%; }
+#siteInfo ul li a {color: #fff; }
+#siteLinks { float: left;clear: both;width: 1000px;border-top: 2px solid #AAA;padding:0 0 50px 0;}
+#siteLinksTop {float:left;clear:both;width:100%;margin:15px 0 10px 0;padding-bottom:10px;border-bottom:1px solid #aaa;}
+#siteLinksTop h1 {font-size:20px;}
+#siteLinksTop h3 {font-size:13px; }
+#siteLinksTop h3 a {color:#ee3923; }
+#siteLinksTop p {font-size:.8em;margin:2px auto;}
+#companyInfo {font-size: 1.2em;text-align: center;clear:both;}
+#companyInfo p {margin-bottom:5px;}
+#bottomPositions {
+	float: left;
+	width: 100%;
+	height: 90px;
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 10px;
+	margin: 0;
+}
+#bottomAd {
+	width: 728px;
+	height: 90px;
+	margin: 0 auto;
+}
+#wzba {float:right;clear:none;width:200px;height:90px;border:0;}
+#wzba img {border:0;}
+
+/*-----right rail styles-----*/
+
+#sideGuideWidget { float:left; clear:none; width:300px; height:100px; background:url(/images/alts/citypaper/bg_searchguides.png); overflow:hidden; }
+#sideGuideWidget table { margin:15px; }
+#sideGuideWidget td { padding:5px 0; }
+#sideGuideWidget p { font:10px Helvetica, Arial, sans-serif; text-transform:uppercase; font-weight:700; color:#fff; margin:0; }
+#signup { float:left; clear:none; background:url(/images/alts/citypaper/bg_signup.png); width:300px; height:125px; overflow:hidden; margin-bottom:15px; }
+#signup p { font:11px Helvetica, Arial, sans-serif; margin:5px 10px; }
+#medRectangle { width:300px; float:left; clear:none; height:250px; margin:15px 0; }
+.teaser li {font-size:11px;line-height:14px;list-style:none outside none;margin:5px auto;}
+ul.teaser {border-bottom:0 none;margin:0;padding:0 0 10px;}
+.widgetItemName {font: 400 16px/16px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;margin: 0 0 3px 0;}
+
+#rightrail .sectionheader {background: #ee3923;font:400 20px/20px "Holtwood One SC",Arial Narrow,Helvetica,sans-serif;text-transform: uppercase;padding: 8px 0;width: 300px;letter-spacing: 1px;float: left;text-align: center;color: #fff;margin: 0;}
+
+.ui-tabs-nav {margin: -1px 0 0 !important;padding: 5px 3px -3px 0 !important;float:left;width:297px;background:#ee3923;}
+#header_slideshow {text-align: center;display: table;background: #fff;font-family: "Holtwood One SC",Arial Narrow,Helvetica,Arial;color: #222;font-size: 16px !important;line-height: 18px !important;text-transform: uppercase;padding: 8px 5px 20px 8px;width: 160px !important;margin: 0 0 -1px 0 !important;letter-spacing: 1px;height: 24px;z-index: -100;}
+#rightrail .ui-tabs-panel {float: left;margin-bottom: 15px;width: 298px;padding: 0;border: 1px solid #aaa;border-top:none;}
+#rightrail #list {  float:left;  margin:10px;}
+#rightrail #list .teaser {  padding: 0 0 5px 0;border-bottom: 1px dotted #666;margin-bottom: 5px;  display:inline-block;  font:400 11px/13px Georgia,Times New Roman,serif;  color:#666;}
+#rightrail #list h3{font:400 16px/16px "Roboto Condensed",Arial Narrow,Helvetica,Arial;  text-transform:uppercase;  margin:0 0 3px 0;}
+#rightrail #list img {  width:70px;  height:70px;  float:left;  margin:0 5px 5px 0;}
+#rightrail #list .bullet {  display:none;}
+#rightrail .teaser li {font-size: 11px;line-height: 14px;list-style: none outside none;margin: 5px 10px;font: 400 16px/16px "Roboto Condensed",Helvetica,Arial,sans-serif;text-transform: uppercase;color: #222;padding: 5px 0;border-top: 1px dotted #aaa;}
+#rightrail .teaser li:first-child {  border-top:0;}
+#rightrail li.dsq-widget-item {margin: 5px 10px !important;overflow: hidden;padding: 5px 0;border-bottom: 1px dotted #aaa;font: 400 11px/13px Georgia,Times New Roman,serif;}
+#rightrail p.dsq-widget-meta {clear: both;padding: 0;margin: 5px 0;}
+#rightrail .dsq-widget-meta a {color:inherit;font: 400 14px/14px "Roboto Condensed",Helvetica,Arial,sans-serif;text-transform: uppercase;}
+#rightrail a.dsq-widget-user {font: 400 11px/11px "Roboto Condensed",Helvetica,Arial,sans-serif;text-transform: uppercase;}
+#rightrail .viewmore, #hometop .viewmore, .viewmore {  font: 700 12px/12px "Holtwood One SC",Helvetica,Arial,sans-serif;margin: 10px;text-transform: uppercase;}
+#rightrail #columns {position: relative;top: 5px;width: 300px;}
+#rightrail .ui-tabs-nav a span {font: 700 12px/12px "Roboto Condensed",Helvetica,Arial,sans-serif;padding: 0 5px !important;background-position: 0 -23px !important;line-height: 27px !important;padding-top: 0 !important;height: 27px;text-transform:uppercase;}
+#rightrail .ui-tabs-nav a {height: 30px;margin: 0 !important;padding: 0 !important;border:0;}
+#rightrail .ui-tabs-nav li {margin: 0 0 -1px 8px !important;border: 1px solid #DDD;border-bottom: 0;background: white;}
+
+/* extra stuff */ 
+
+#bob-lead { background:url('/polopoly_fs/7.108647.1320271493!/button_bob10.png') repeat-x; float:left; clear:none; width:670px; height:55px; }
+#bob-lead-480 { background:url('/polopoly_fs/7.108647.1320271493!/bob-lead-480.png') repeat-x; float:left; clear:none; width:470px; height:50px; margin:5px 0; }
+#personalbests-lead { background:url('/polopoly_fs/7.108647.1320271493!/link-personalbests.png') repeat-x; float:left; clear:none; width:650px; height:30px; margin:5px 0; }
+#fictionpoetry-480 { background:url('/polopoly_fs/7.108647.1320271493!/button_fictionpoetry.png') repeat-x; float:left; clear:none; width:470px; height:75px; margin:5px 0; }
+#hg-head-480 { background:url('/polopoly_fs/7.108647.1320271493!/hg-head-480.png') repeat-x; float:left; clear:none; width:470px; height:95px; margin:5px 0 15px 0; }
+#links {font-family:Helvetica,Arial,sans-serif;border:1px solid #999;padding:10px;float:left;margin:0 15px 15px 0;width:315px;}
+#links h2 {font-size:18px;font-weight:100;margin:0 0 10px;}
+#links h3 {font-size:12px;font-weight:700;margin:15px 0 0 0;}
+#links p {font-size:12px;margin:1px 0;font-family:Helvetica,Arial,sans-serif;}
+#guidelist h2 { font-size:24px; margin:20px 0 2px 0; }
+#guidelist h3 { font-size:18px; font-weight:bold; margin:5px 0 2px 0; }
+#guidelist p { font-size:13px; margin:2px 0; }
+#button_baltimanual {width:225px;height:65px; background:url('/polopoly_fs/7.108647.1320271493!/button_baltimanual.png') repeat-x;float:left;margin-right:20px;}
+#button_101 {width:225px;height:65px; background:url('/polopoly_fs/7.108647.1320271493!/button_101.png') repeat-x;float:left;}
+
+/*-----------------disqus-----------------*/
+
+#center #disqus_thread {float:left !important;margin-bottom:10px !important;width:470px !important;}
+#disqus_thread {float:left !important;margin-bottom:10px !important;width:650px !important;}
+.dsq-widget-meta a {font-weight:bold;color:#ee3923;font-size:10px;}
+a.dsq-widget-user {font-weight:normal !important;} 
+
+      

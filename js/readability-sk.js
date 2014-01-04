@@ -76,7 +76,7 @@ var readability = {
      * @return true if successful
      **/
 	
-    init: function(element, overlayName, parentName) {		
+    init: function(sourceElement, overlayID, parentID) {		
 		// SK: readability used to remove scripts, etc, don't do it anymore
 		// SK: skip this prep document (which strips out document styles, etc). might need to remove style attributes from the converted pages
 
@@ -86,7 +86,7 @@ var readability = {
 
         /* Build readability's DOM tree */
         var articleTitle   = readability.getArticleTitle();
-        var articleContent = readability.grabArticle(element);
+        var articleContent = readability.grabArticle(sourceElement);
         
 		if (!articleContent) {
 			console.log("Could not find article content");
@@ -94,9 +94,14 @@ var readability = {
 		}
 		
         /* Glue the structure of our document together. */
+		var outerDiv = $('<div>');
+		outerDiv.attr('id', overlayID);
+		outerDiv.addClass('readabilityOuter');
+		outerDiv.append($(articleContent));
+		
         $(articleContent).prepend($(articleTitle));
-		$(articleContent).attr('id', overlayName);
-		$(parentName).append(articleContent);
+		$(articleContent).addClass('readabilityInner');
+		$(parentID).append(outerDiv);
 		
 		// if i actually added any temp nodes from the dom, remove them
 		$('.readabilityTemp').remove();
@@ -155,7 +160,6 @@ var readability = {
         var articleTitle = document.createElement("H1");
         articleTitle.innerHTML = curTitle;
 		$(articleTitle).addClass("readability-title");
-		
         
         return articleTitle;
     },

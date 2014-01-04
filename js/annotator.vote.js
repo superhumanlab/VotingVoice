@@ -6,6 +6,7 @@ This does a bunch of cool stuff.
 - customizable image-based tagging (checkmark vs. X, 4 star rating, etc)
 - ties the highlight spans to the annotator object by setting the span id to the annotation's store ID
 - speak button added to viewer (requires mespeak)
+- speak button for selection highlight, too.
 
 */
 
@@ -19,20 +20,17 @@ var tag4 = ['check', 'x', 'qmark', 'star-full'];
 var tag8 = ['check', 'x', 'qmark', 'star-full', 'house', 'money', 'book2', 'health'];
 var starIDs = ['star1', 'star2', 'star3', 'star4']
 
-// plugin global
-var votePlugin = null;
-
 Annotator.Plugin.Vote = function(element, options) {
-	var plugin = {};
 	Annotator.Plugin.apply(this, options);
-	votePlugin = this;
 	
 	// set an tagMode and show the toggle button. default is plaintext
 	if (options["tagMode"] !== undefined) this.tagMode = options["tagMode"];
 	else this.tagMode = "plaintext";
+	
+	this.useSpeech = options["useSpeech"];
 
 	// extend the annotator plugin, and listen for events
-	plugin.pluginInit = function() {
+	this.pluginInit = function() {
 		this.annotator
 			.subscribe("annotationsLoaded", function(annotations) {
 				// give each annotation highlight the id of its corresponding annotation
@@ -53,8 +51,27 @@ Annotator.Plugin.Vote = function(element, options) {
 			load: Annotator.Plugin.Vote.prototype.updateEditor,
 			submit: Annotator.Plugin.Vote.prototype.editorSubmit,
 		});
+		
+		if (this.useSpeech) {
+			var newAdder = $('<div class="annotator-adder">');
+			var addButton = $('<button class="adderButton">');
+			addButton.click(this.annotator.adder.onAdderClick);
+			
+			// add a speak button
+			var speakButton = $('<div class="speakButton"><div style="line-height: 40px">Speak</div></div>"');
+			speakButton.mousedown(function(e) {
+				vvSpeak(getSelectedText());
+			})
+			newAdder.append(addButton);
+			//newAdder.append(speakButton);
+			var button = $('.annotator-adder button');
+			//$(this.annotator.adder).off('click');
+			
+			this.annotator.adder.append(speakButton);
+			// this.annotator.adder = newAdder;
+		}
 	}
-	return plugin;
+	return this;
 };
 
 Annotator.Plugin.Vote.prototype = new Annotator.Plugin();
@@ -94,12 +111,14 @@ Annotator.Plugin.Vote.prototype.updateViewer = function(field, annotation) {
 		if (buttonContainer.children().length > 0) $(field).append(buttonContainer);
 	}
 	
-	// add a speak button
-	var speakButton = $('<div class="annotator-speakButton"><img src="../images/speakbutton.png"/></div>');
-	speakButton.click(function(e) {
-		vvSpeak(annotation.text);
-	})
-	$(field).append(speakButton);
+	// if speech is enabled, add a speak button
+	if (this.useSpeech) {
+		var speakButton = $('<div class="annotator-speakButton"><img src="../images/speakbutton.png"/></div>');
+		speakButton.click(function(e) {
+			vvSpeak(annotation.text);
+		})
+		$(field).append(speakButton);
+	}
 	
 	// if we didn't add anything, remove this empty editor field
 	if ($(field).children().length == 0) $(field).remove();

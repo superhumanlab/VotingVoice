@@ -1,0 +1,118 @@
+/* Id: 7.108649.1343676752
+ * Generated: Jan 4, 2014 2:11:17 AM
+ */
+    @media print  {
+.tabcontent {
+display:block !important;
+}
+}
+
+#topAds {
+float:left;
+clear:none;
+width:300px;
+height:275px;
+margin-bottom:15px;
+text-align:left;
+background:url(/images/alts/citypaper/bg_topads.png);
+background-repeat:no-repeat;
+}
+
+#topAds p {
+font:10px Helvetica, Arial, sans-serif;
+letter-spacing:0.5px;
+margin:5px;
+}
+
+.topAdSection {
+font-size:12px;
+font-family:Arial,Helvetica,Arial,sans-serif;
+color:#FBC926;
+line-height:11px;
+text-transform:uppercase;
+font-weight:700;
+}
+
+.topAdHeadline {
+font-size:11px;
+font-family:Arial,Helvetica,Arial,sans-serif;
+color:#FBC926;
+line-height:11px;
+text-transform:uppercase;
+font-weight:700;
+}
+
+.topAdText {
+font-size:10px;
+font-family:Arial,Helvetica,Arial,sans-serif;
+color:#fff;
+line-height:11px;
+padding-top:5px;
+margin:5px;
+}
+
+#topAds #topAdsDiv {
+border:1px solid gray;
+background:#262626;
+width:280px;
+height:160px;
+margin:0 10px;
+}
+
+#topAds #topadtabs {
+font:bold 12px Helvetica, Arial, sans-serif;
+list-style-type:none;
+text-align:left;
+margin:30px 10px 0;
+padding:3px 0;
+}
+
+#topAds #topadtabs li {
+display:inline;
+margin:0;
+}
+
+#topAds #topadtabs li a {
+text-decoration:none;
+position:relative;
+z-index:1;
+margin-right:3px;
+border:1px solid #778;
+color:#FBC926;
+background:url(shade.gif);
+padding:3px 7px;
+}
+
+#topAds #topadtabs li a:visited {
+color:#efefef;
+}
+
+#topAds #topadtabs li a:hover {
+text-decoration:underline;
+color:#fc0;
+}
+
+#topAds #topadtabs li a.selected {
+position:relative;
+border-bottom:1px solid #262626;
+background-color:#262626;
+}
+
+#topAds #topadtabs li a.selected:hover {
+text-decoration:none;
+}
+
+.tabcontent {
+display:none;
+}
+
+.classifiedDropdown {
+font:14px Arial, Helvetica, Geneva, sans-serif;
+color:#000;
+border:1px solid #999;
+background:#FBC926;
+margin:5px 0;
+padding:2px;
+}
+
+      

@@ -1,0 +1,506 @@
+/* Id: 7.116173.1369953782
+ * Generated: Jan 4, 2014 2:11:17 AM
+ */
+    #calendarHeader {
+background:url('/polopoly_fs/7.116173.1369953782!/highlights.jpg') repeat-x;
+width:300px;
+height:40px;
+}
+.calendarNote {
+font-family:Arial, Helvetica, sans-serif;
+font-size:10px;
+color:#666;
+text-align:center;
+}
+
+#mainCalendar {
+background:none;
+width: 298px;
+padding-top: 20px;
+}
+.calendarEvents .widgetItemImage {
+display:block !important;
+margin:0 5px 5px  0;
+width:60px;
+height:60px;
+}
+.calendarEvents .widget .widgetItems li {
+padding:10px !important;
+}
+.calendarEvents .eventList .widgetItemBody {position: relative;}
+
+/* @group Reset */
+
+.widget dl, .widget dt, .widget dd,
+.widget ul, .widget ol, .widget li,
+.widget h1,.widget h2,.widget h3,.widget h4,.widget h5,.widget h6,
+.widget pre,.widget form,.widget fieldset,.widget input,.widget textarea,
+.widget p,.widget blockquote,.widget table,.widget th,.widget td,
+.widget a {
+margin:0;
+padding:0;
+}
+.widget img {border:0;outline:0;width:60px;}
+.widget table {
+border-collapse:collapse;
+border-spacing:0;
+}
+.widget h1,.widget h2,.widget h4,.widget h5,.widget h6 {
+font-size:1em;
+}
+.widget h3 {
+font-size:11px;
+}
+
+/* @end */
+
+/* @group Common */
+
+.widget {
+margin: 0 0 30px 0;
+padding: 0;
+font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+overflow: hidden;
+min-height:140px;
+float:left;
+
+}
+.guideWidget {
+margin: 0 0 20px 0;
+padding: 0;
+font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+overflow: hidden;
+float: left;
+width: 298px;
+background:none;
+  border:0;
+}
+.w-left {
+float: left;
+clear: left;
+margin-left: 10px;
+width: 384px;
+}
+.w-right {
+float: right;
+clear: right;
+margin-right: 10px;
+width: 300px;
+}
+
+.day input {width: 60px;}
+
+.widget h5 {
+text-transform: uppercase;
+font-size: 1.4em;
+color: #666;
+text-align: left;
+}
+
+.widget a {
+text-decoration: none;
+color: #EE3923;
+}
+.widget a:hover, .widget a:active {text-decoration: underline;}
+
+.widget textarea {overflow:auto;}
+.widget input[type=submit] {padding:2px 4px;}
+
+/* @group ExpandoBlock (control title) */
+
+.titleExpandoBlockContainer {
+line-height: 24px;
+color: #ccc;
+}
+.widgetHead {
+border-bottom: 1px solid #bfbfbf;
+position: relative;
+font-size: 10px;
+}
+.widgetHead h3 {
+text-transform: capitalize;
+font-size: 2.0em;
+color: #666;
+text-align:left;
+position: relative;
+font-weight:lighter;
+}
+.widgetHead .widgetAllButton {
+color: #bfbfbf;
+font-size: .6em;
+position: absolute;
+right: 0;
+bottom: 0;
+font-weight: normal;
+}
+.widgetHead .lnkPhotoAddNew {
+color: #bfbfbf;
+font-size: .6em;
+font-weight: normal;
+margin-left: 10px;
+}
+
+/* @end */
+
+input.goButton {
+display: inline-block;
+width: 35px;
+height: 20px;
+border: 0;
+background: url(../img/gobutton.png) no-repeat;
+color: #fff;
+font-size: 1.1em;
+text-transform: uppercase;
+cursor: pointer;
+position: relative;
+top: -1px;
+}
+input.goButton:active {top: 0;}
+
+.clear,
+.clearLine {
+font-size: 0;
+clear: both;
+line-height: 0;
+}
+
+.information, .error, .success, .validationSummary {
+padding: 20px;
+border: 1px solid #999;
+text-align: center;
+background-color: #ffc;
+font-size: 1.2em;
+font-weight:bold;
+color: #333;
+margin: 5px 0;
+}
+.error {background-color: #fcc;}
+.success {background-color: #9f8;}
+.information {font-style: italic;}
+.watermark {color:#aaa;}
+
+/* @group ValidationSummary */
+
+.validationSummary {
+font-size:1em;
+padding: 10px;
+background-color: #fee;
+border-color: #edd;
+}
+.validationSummary ul {
+font-weight: normal;
+margin: 5px 5px 5px 20px;
+}
+.validationSummary li {margin: 0 0 2px;}
+
+/* @end */
+
+/* @end */
+
+/* @group Overlay */
+
+.overlay {
+display:none;
+z-index:10000;
+width: 704px;
+padding: 10px;
+min-height: 200px;
+background: #fff;
+border: 1px solid #000;
+-moz-box-shadow: 0 0 90px 5px #000;
+-webkit-box-shadow: 0 0 90px 5px #000;
+}
+.overlay .close {
+background-image: url(../img/overlay/close.png);
+position:absolute;
+right:-15px;
+top:-15px;
+cursor:pointer;
+height:35px;
+width:35px;
+}
+
+#fbLoading, #photoUploadBox, #selfPublishTerms, #FriendRequestOverlay { width:auto; height:auto; min-height:0; } 
+#fbLoading .close {display:none;} 
+#photoUploadBox, #selfPublishTerms { padding: 10px; } 
+.photoUpload, .overlay1col { width: 300px; padding: 20px; border: 1px solid #eee; } 
+a.overlayTrigger {cursor:pointer;} 
+/* @end */
+
+/* @group Breadcrumb */ .breadcrumb { padding: 20px 10px 4px 10px; margin-bottom:16px; border-bottom: solid 1px #daedf6; } 
+/* @end */
+
+/* @group 3Col Styles */ .neighborhoodCol { float: left; display: block; width: 125px; margin-right: 2px; list-style: none; } 
+.neighborhoodCol li {margin-bottom: 3px;} 
+.sortHeader { border-bottom: 1px solid #bfbfbf; margin: 20px 0 10px 0; } 
+/* @end */
+
+/* @group 30 Day Calendar */ #calendar-wrap { font-size: 8px; overflow: hidden; clear: both; } 
+#calendar { width: 200px; padding-bottom: 5px; float: left; margin-left:5px; } 
+.calendar-table { margin: 0 auto; font-size: 1.8em; } 
+.calendar-table th, .calendar-table td { text-align: center; vertical-align: middle; padding: 5px; } 
+.calendar-table th { font-weight: bold; color: #fff; } 
+.calendar-table th a { cursor: pointer; display: inline-block; text-transform: uppercase; } 
+.calendar-table th a#prevMonthArrow, .calendar-table th a#nextMonthArrow { font-size: .8em; color: #fff; font-family: "Times New Roman", Times, "Arial Unicode MS", Arial; } 
+.calendar-table th a.arrow:hover, .calendar-table th a.arrow:active { text-decoration: none; } 
+.calendar-table th a#currMonthLink { color: #4D4D4D; cursor: auto; margin: 0 4px; } 
+.calendar-table th a#prevMonthLink, .calendar-table th a#nextMonthLink { color: #999999; margin: 0 4px; } 
+.calendar-table th .divider {font-weight: normal;} 
+.calendar-table td.calendar-day {padding: 3px;} 
+.calendar-table td a { display: block; width: 22px; height: 22px; margin: 0 auto; padding: 0; background-image: url('/polopoly_fs/7.116173.1369953782!/calendar-numbers.png'); } 
+.calendar-table td.currentmonth a {background-position: 0 0; } 
+.calendar-table td.nextprevmonth a {background-position: 0 -22px; } 
+#cal-selection { float: left; width: 80px; margin-top:15px; margin-left: 5px; text-align: center; color: #666; font-size: 1.2em; } 
+#cal-selection span { display: block; width: 70px; height: 70px; line-height: 70px; margin: 5px auto; background-image: url('/polopoly_fs/7.116173.1369953782!/bluebox-10px-rounded.png'); color: #fff; font-size: 5.75em; font-weight: bold; } 
+.calendarEventList li { padding: 10px; border-bottom: none; border-top: none; } 
+.calendarEventList li.alt {background-color: #fff;} 
+.calendarEventList .widgetItemBody {width: 225px;} 
+/* @end */
+
+/* @group 7 Day Calendar */ #calendar7Day { -moz-border-radius-bottomleft:10px; -moz-border-radius-bottomright:10px; border-color:-moz-use-text-color #666666 #666666; border-right:1px solid #666666; border-style:solid; border-width:1px; margin-bottom:10px; padding-top:20px; background:none repeat scroll 0 0 #A2C3CC; } 
+#calendar7Day_Days { overflow:hidden; font-size: 18px; font-weight: bold; margin:0 10px 0px 10px; } 
+#calendar7Day_Days li {background:none repeat scroll 0 0 #999999;color:#FFFFFF;cursor:pointer;display:block;float:left;margin-left:5px;overflow:hidden;padding:10px 5px;width:25px;}#calendar7Day_Days li:first-child {margin-left:0;} 
+#calendar7Day_Days li.selected {color:#cc3300;background:#fff;} 
+#calendar7Day_Days span {display: block;text-align: center;} 
+/* @end */
+
+/* @group Filter Widget */ .filterWidget {margin-top: 13px;background:#f8efdc;padding:5px;} 
+.filterWidget select {width: 285px;margin-bottom: 6px;} 
+.filterWidget .widgetHead {margin-bottom: 10px;} 
+.filterWidget input,select{border:1px solid #ddd;font-size:14px;margin:1px auto;padding:.06em;color:#666;} 
+.filterWidget .dateInput { width:135px;margin-bottom: 6px;margin-right: 3px;} 
+.filterLabel { width:90px; display:inline-block; padding-left:5px;} 
+.fileterText { width:190px; } 
+.filterLine {margin-bottom:6px;} 
+input.doFilterBtn { display: inline-block; width: 35px; height: 20px; border: 0; background: url(http://www.calendar570.com/img/gobutton.png) no-repeat; color: #fff; font-size: 1.1em; text-transform: uppercase; cursor: pointer; position: relative; top: -1px; } 
+input.doFilterBtn:active {top: 0;} 
+/* @end */
+
+/* @group Event Detail */ .eventDetailInner, .eventDetailBodyRightInner { background-color: #fff; border: 1px solid #e1f0f8; padding: 10px; overflow:hidden; -moz-border-radius: 5px; -webkit-border-radius: 5px; } 
+.eventDetailLeft { float: left; width: 170px; } 
+.eventDetailRight { float: right; width: 100px; height: 100px; } 
+.eventDetailRight img { width: 100px; height: 100px; } 
+.eventDetailLeft h3 { text-transform: uppercase; font-size: 1.4em; color: #77827C; text-align: left; } 
+.eventDetailLine .eventDetailLabel, .eventDetailLine .eventDetailValue { font-size: .87em; color: #77827C; text-align: left; } 
+.eventDetailBodyInner h3 { text-transform: uppercase; font-size: 1.8em; color: #77827C; text-align: left; } 
+.eventDetailBodyInner p { color: #77827C; text-align: left; margin-top: 6px; } 
+.eventDetailBodyRight { float: right; width: 82px; margin-left: 6px; } 
+.eventDetailBodyRightInner input { font-size: .8em; width: 80px; } 
+/* @end */
+
+/* @group Photo Detail */ #photo { text-align: center; padding: 10px; } 
+#photo .actions {margin-top: 5px;} 
+#photo .actions a { display: inline-block; margin-bottom: 5px; } 
+.btnPhotoDelete, .btnPhotoUpdate { display: inline-block; padding: 5px 20px; background: #eee; border: 1px solid #aaa; color: #000; font-weight: bold; font-size: 12px; } 
+#photoInfo {font-size: 1.2em;} 
+#photoInfo label{ display: block; float:left; clear:left; width: 8em; color: #666; font-weight: bold; } 
+#photoInfo .txt { width: 42em; border: 1px solid #f3f3f3; background: transparent; padding: 2px; } 
+#photoInfo .txt:hover { border-color: #ccc; } 
+#photoInfo .readonly:hover { border-color: #f3f3f3; } 
+#photoInfo .readonly { color: #999; } 
+#photoInfo .focus { border-color: #666; background: #fff; } 
+#photoInfo .focus:hover {border-color: #666;} 
+#photoInfo div {margin-bottom: 10px;} 
+.attributeDetailBox .eventDetailInner { margin-top: 5px; margin-bottom: 5px; font-size: 1.2em; } 
+.attributeDetailBox .eventDetailLine .eventDetailLabel { display:block; float:left; width:120px; text-align:right; font-weight:bolder; } 
+.attributeDetailBox .eventDetailLine .valWrapper { display:block; float:left; width:120px; padding-left:5px; text-align:left; margin-bottom:5px; border-left:solid 1px #eee; margin-left:5px;} 
+.attributeDetailBox .eventDetailLine .valWrapper .eventDetailValue { display:block; } 
+/* @end */
+
+/* @group List Item Common */ .simpleWidget { margin-bottom:20px;} 
+.simpleWidget li { margin: 2px 0 !important; padding: 2px 0 !important; border-top: 1px solid #bfbfbf; overflow: hidden; } 
+.simpleWidget .widget .widgetItems li:first-child {border:0 none;margin:0 10px;padding:10px;background:white;} 
+.simpleWidget .eventList .widgetItemBody { position:relative; width:100% !important; } 
+.widgetItems, .widgetPhotoItems {list-style: none;} 
+.widget .widgetItems li { border-top:1px solid #BFBFBF; margin:0px 10px !important; overflow:hidden; padding:10px 0; background:white; } 
+.widget .widgetItems li:first-child {border:0 none;margin:0 10px !important;padding:10px 0;} 
+.widgetPhotoItems { list-style: none; display: block; width: 300px; overflow: hidden; } 
+.widgetPhotoItems li { float: left; width: 40px; height: 45px; padding: 5px 0 0 0; overflow: hidden; } 
+.widgetPhotoItems li:first-child {border: 0;} 
+.widgetPhotoItems li.sep { display: block; width: 12px; height: 40px; margin-top: 6px; padding: 0; } 
+.widgetItemImage { float: left; position: relative; top: 3px; width:60px; height:60px; margin:0 10px 0 0 !important; /*overflow:hidden;*/ } 
+.widget .widgetItemBody { float: left; /*margin-left: 10px; overflow: hidden;*/ width: 208px; color: #666; } 
+.widgetItemOneLineDesc, .widgetItemTwoLineDesc { font-size: 10.5px !important; /*height: 1.2em;*/ line-height: 1.2em !important; text-overflow: ellipsis; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; } 
+.widgetItemName { display: block; } 
+.widgetItemOneLineDesc { float:left;max-height:25px; overflow:hidden; margin:3px 0; } 
+.widgetItemTwoLineDesc {/*height: 2.4em;*/} 
+.widgetItemTags, .widgetItemPlace, .widgetItemCats { color: #222; font: 400 12px/12px "Roboto Condensed",Helvetica,Arial,sans-serif;text-transform: uppercase;} 
+.wrapLine { /* min-height: 35px;*/ margin:2px auto; } 
+/* @end */
+
+/* @group Event List */ 
+.eventList {} 
+.eventList li, .venueList li {background:none !important;margin:0 0 10px 0;} 
+.eventList .widgetItemBody, .venueList .widgetItemBody {position: relative;width: 100%;} 
+.eventList .widgetItemName {float: left;width: 75%;color: #EE3923;font: 400 20px/22px "Roboto Condensed",Arial Narrow,Helvetica,Arial;text-transform: uppercase;} 
+.venueList .widgetItemName {float: left;width: 100%;color:#f30;} 
+.eventList .eventStart {float: right;padding-top: 4px;color: #333;font: 400 16px/16px "Roboto Condensed",Arial Narrow,Helvetica,sans-serif;} 
+/* @end */
+
+/* @group Social Buttons */ .socialButtons { float: right; width: 62px; height: 40px; position: relative; } 
+.socialButtons .sharethis, .socialButtons .imgoing, .socialButtons .removegoing { width: 62px; height: 18px; background: #aef url('/polopoly_fs/7.116173.1369953782!/sharethis.gif') no-repeat; cursor: pointer; } 
+.socialButtons .sharethis {margin-bottom: 8px;} 
+.socialButtons .sharethis:hover {background-image: url('/polopoly_fs/7.116173.1369953782!/sharethis_over.gif');} 
+.socialButtons .imgoing {background-image: url('/polopoly_fs/7.116173.1369953782!/imgoing.gif');} 
+.socialButtons .imgoing:hover {background-image: url('/polopoly_fs/7.116173.1369953782!/imgoing_over.gif');} 
+.socialButtons .removegoing {background-image: url('/polopoly_fs/7.116173.1369953782!/removegoing.gif');} 
+.socialButtons .removegoing:hover {background-image: url('/polopoly_fs/7.116173.1369953782!/removegoing_over.gif');} 
+.facebookShareLink {cursor: pointer;} 
+#shareThisBox h4 {font-size: 2em;margin-bottom: 10px;} 
+#shareThisBox h5 {font-size: 1.4em;margin-bottom: 5px;} 
+#shareThisBox .container {float: left;} 
+#shareThisEmail {margin-right: 10px;padding-right: 10px;border-right: 1px solid #999;} 
+#shareThisEmail ol {float: none;} 
+.upcommingDates .socialButtons {height:auto;} 
+/* @end */
+
+/* @group Comment Box */ 
+.commentBox textarea { width: 99%; background-color: #fff; -moz-border-radius: 2px; -webkit-border-radius: 2px; border: 1px solid #e1f0f8; color: #bfbfbf; } 
+.commentBox input { background: transparent url(../img/addcomment.gif) no-repeat scroll 0 0; color: #fff; margin-top: 6px; font-size: .7em; font-weight: bold; width: 90px; height: 18px; line-height: 18px; } 
+/* @end */
+
+/* @group Restaurant List */ 
+.restaurantWidget {-moz-border-radius:10px 10px 10px 10px;background-color:#DB8D1E;border:1px solid #666666;padding:10px;position:relative;top:20px;width:450px;} 
+.restaurantWidget .widgetHead {border-bottom:0;} 
+.restaurantWidget h3 {color:#fff;letter-spacing:0;margin-bottom:5px;} 
+.restaurantWidget .widgetAllButton {color:#fff;font-weight:bold;letter-spacing:0;} 
+.restaurantWidgetNew {width:280px;margin:20px 10px;} 
+.restaurantWidgetNew .widgetHead {border-bottom:0;} 
+.restaurantWidgetNew h3 {color:#fff;letter-spacing:0;margin-bottom:5px;} 
+.restaurantWidgetNew .widgetAllButton {color:#f30;font-weight:bold;letter-spacing:0;} 
+.restaurantWidgetNew .restaurants .city input, .restaurantWidgetNew .clubs .city input {width: 178px;}
+.restaurantWidgetNew .restaurants input, .restaurantWidgetNew .clubs input {border: 0;margin: 0 10px 10px 0;padding: 6px;width: 250px;height: 20px;background: #E0DEDE;font: normal 14px/14px "Roboto Condensed",Helvetica,Arial,sans-serif;color: #999;}
+.restaurantWidgetNew .restaurants .btn, .restaurantWidgetNew .clubs .btn {background: none repeat scroll 0 0 #FC0;font: bold 14px "Roboto Condensed",Helvetica,Arial;text-transform: uppercase;width: auto;cursor: pointer;border: 0;height: 31px;color: black;padding: 0 7px;}
+.restaurants input {border:1px none;margin:2px 2px 0;padding:2px;width:175px;} 
+.restaurantFilters {line-height:2;} 
+#restaurantItems {background:#fff;margin-top:10px;} 
+#restaurantItems li, #clubItems li {border-top: 1px solid #DDD;margin: 0 10px 0 0!important;padding: 8px 0;}
+#restaurantItems li.alt {background:#fff;} 
+#restaurantItems a {color:#FF3300;} 
+#restaurantItems .widgetItemImage {display:none;}
+#restaurantItems .widgetItemBody {width:100%;}
+#restaurantItems .widgetItemImage, #clubItems .widgetItemImage {display: none;}
+
+/* @end */
+
+/* @group Find Friends */ #findFriendsResults {margin-top:10px;} 
+#findFriendsResults li { overflow:hidden; position:relative; margin-bottom:5px; line-height:40px; height:40px; padding:0 0 10px; } 
+#findFriendsResults .widgetItemName {position:relative;top:10px;display:block;height:40px;} 
+#findFriendsResults .friendRequestMark {position:absolute;top:2px;right:15px;} 
+#friendRequest a { background:#ffa601; font-size: .8em; font-weight:bold; color:#fff; padding: 1px 4px; cursor:pointer; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; } 
+#findFriendsResults.loading {height:40px;background:url(../img/loading.gif) no-repeat center;} 
+/* @end */
+
+/* @group Pager Control */ .pagerContainer {margin-top: 4px;} 
+.pagerLinkList { list-style: none; width: 100%; text-align: right; } 
+.pagerContainer .pagerLink { display: inline-block; margin-left: 4px; } 
+.pagerContainer .pagerLink a { display: inline-block; padding: 2px 3px; border: 1px solid #ccc; background: #eee; color: #000; text-decoration: none; } 
+.pagerLink a:hover, .pagerLink a:active, .pagerLink a.pagerCurrentPage { background: #ccc; border-color: #999; } 
+/* @end */
+
+/* @group Tag Cloud */ .tagcloud { padding: 0; margin: 10px 0 0; font: 10px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; } 
+.tagcloud h3 { padding: 0; margin: 10px 0 0; color: #999; border-bottom: 1px solid #999; font-size: 1.8em; text-transform: uppercase; font-weight: normal; } 
+.tagcloud ul { list-style:none; margin: 2px 0 0; padding: 0; } 
+.tagcloud li { display:inline; margin: 0; padding: 0; } 
+.tagcloud li a { font-size: 1.2em; margin: 0; padding: 2px; color: #ffa601; text-decoration: none; display: inline; } 
+.tagcloud.neighborhood li a {color: #60afd7 !important;} 
+.tagcloud li a:hover, .tagcloud li a:active { text-decoration: underline; } 
+/* @end */
+
+/* @group User Info Forms */
+
+/* @group User Info Form Common */ .userInfoForm { overflow: hidden; text-align: left; float: left; } 
+.userInfoForm ol { list-style: none; margin: 5px 0 0; padding: 10px; background: #fff; width: 400px; border: 1px solid #eee; } 
+.userInfoForm li {margin-bottom: 12px;} 
+.userInfoForm li.first { padding-bottom: 12px; border-bottom: 1px solid #aaa; } 
+.userInfoForm label { display: inline-block; width: 110px; font: 1.2em HelveticaNeue-Light, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #666; vertical-align: top; position: relative; top: 3px; } 
+.userInfoForm input.txt, .userInfoForm textarea { font-size: 1.2em; padding: 4px 3px; border: none; background: #e6e6e6; width: 280px; } 
+.userInfoForm li.formActions { text-align: right; margin-bottom: 0; margin-top: -24px; } 
+/* @end */
+
+/* @group Login/Create User Form Common */ #loginForm .w_newAccount, #createUserForm .facebookConnect { width: 280px; float: right; overflow: hidden; text-align: center; font-size: 1.4em; color: #666; margin-top: 5px; } 
+#loginForm li.formActions, #createUserForm li.formActions { margin-top: -24px; } 
+/* @end */
+
+/* @group Login Form */ #loginForm ol {margin-bottom: 10px;} 
+#loginForm .newAccountButton {display: block;margin-top: 5px;} 
+#loginForm .facebookConnect { clear: both; overflow: hidden; background: #e6e6e6; padding: 10px; text-align: left; } 
+#loginForm .facebookConnect a {float: left;} 
+#loginForm .facebookConnect p { margin-left: 314px; font: 1.1em HelveticaNeue-Light, "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #666; } 
+/* @end */
+
+/* @group Create User Form */ #createUserForm .facebookConnect {font-size: 1em;} 
+#createUserForm .facebookConnect p { width: 200px; margin: 5px auto; text-align: left; } 
+.facebookConnectLink {cursor:pointer;} 
+/* @end */
+
+/* @group Profile Edit Form */ #profileEditForm li {margin-bottom: 5px;} 
+#profileEditForm label { display:inline-block; width: 100px; vertical-align: top; } 
+#profileEditForm .txt { width: 60%; font-size: 1.2em; padding: 4px 3px; border: none; background: #e6e6e6; } 
+/* @end */
+
+/* @end */
+
+/* @group View Profile */ #profilePhoto { width:260px; overflow:hidden; text-align:center; margin:6px auto; padding:10px; border:1px solid #eee; } 
+#uploadProfilePhotoLink { display:block; margin: 10px 0 0; text-align:right; } 
+#profileInfoList li { margin: 5px 0; padding: 5px 0; border-top: 1px solid #ccc; } 
+#profileInfoList li:first-child { margin-top:0; padding-top:0; border-top:0; } 
+#profileInfoList .profileEditLink { display:block; text-align:right; } 
+/* @end */
+
+/* @group My Friends */ #myFriends table {margin: 5px 0 20px;} 
+#myFriends td {padding: 0 10px 6px 0;font-size:.8em;text-align:center;width:40px;} 
+#myFriends label { font-size:.75em; font-weight:bold; } 
+#myFriends .txt { width: 175px; background: #eee; border: 1px solid #ccc; padding: 1px; } 
+#myFriends .btn { border:0; background:#ffa601; font-size: .8em; font-weight:bold; color:#fff; padding: 1px 4px; cursor:pointer; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; } 
+#FriendRequestOverlay .close { position:relative; top: 0; right: 0; height: auto; width: auto; background-image: none; } 
+#FriendRequestOverlay_Message, #FriendRequestOverlay_Actions { text-align:center; font-size: 1.2em; } 
+#FriendRequestOverlay_Actions {margin: 10px auto 0;} 
+#FriendRequestOverlay_Actions a { display:inline-block; padding: 4px 8px; margin: 5px; border: 1px solid #999; background: #ccc; color: #000; font-weight:bold; } 
+/* @end */
+
+/* @group Slimbox */ #lbOverlay {position: fixed;z-index: 9999;left: 0;top: 0;width: 100%;height: 100%;background-color: #000;cursor: pointer;} 
+#lbCenter, #lbBottomContainer {position: absolute;z-index: 9999;overflow: hidden;background-color: #fff;} 
+.lbLoading {background: #fff url(../img/slimbox/loading.gif) no-repeat center;} 
+#lbImage {position: absolute;left: 0;top: 0;border: 10px solid #fff;background-repeat: no-repeat;} 
+#lbPrevLink, #lbNextLink {display: block;position: absolute;top: 0;width: 50%;outline: none;} 
+#lbPrevLink {left: 0;} 
+#lbPrevLink:hover {background: transparent url(../img/slimbox/prevlabel.gif) no-repeat 0 15%;} 
+#lbNextLink {right: 0;} 
+#lbNextLink:hover {background: transparent url(../img/slimbox/nextlabel.gif) no-repeat 100% 15%;} 
+#lbBottom {font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;font-size: 10px;color: #666;line-height: 1.4em;text-align: left;border: 10px solid #fff;border-top-style: none;} 
+#lbCloseLink {display: block;float: right;width: 66px;height: 22px;background: transparent url(../img/slimbox/closelabel.gif) no-repeat center;margin: 5px 0;outline: none;} 
+#lbCaption, #lbNumber {margin-right: 71px;} 
+#lbCaption {font-weight: bold;} 
+/* @end */
+
+/* @group Friend Request Widget */ #friendRequestAlertsContainer {margin: 0 0 10px;padding: 10px;border: 1px solid #ccc;background: #fee;font-size: .9em;font-weight:bold;} 
+#friendRequestAlertsContainer ul {list-style: square;margin-left:20px;} 
+#friendRequestActionOverlay {width:auto;padding:20px 40px;} 
+#friendRequestActionOverlay h3 {font-size:1.6em;color:#333;margin:0 20px 10px;} 
+#friendRequestActionOverlay .button {display:inline-block;padding:4px 8px;margin:0 5px;border:1px solid #999;background:#ccc;color:#000;font-weight:bold;} 
+#friendRequestActionOverlay_FriendImage {margin:0 20px;padding:5px;border:1px solid #eee;float:left;} 
+/* @end */
+
+/* @group All Friends */ #allFriendsWidget table {margin-top:10px;} 
+#allFriendsWidget td {padding:5px;text-align:center;} 
+/* @end */
+
+/* @group Friend Status Button */ #FriendStatusButton {text-align: center;} 
+#FriendStatusButton a { display: inline-block; padding: 5px 10px; border: 1px outset #999; font-weight: bold; color: #000; text-decoration: none; } 
+#FriendStatusButton .btnRemoveFriend:active, #FriendStatusButton .btnAddFriend:active {border-style: inset;padding: 6px 9px 4px 11px;} 
+#FriendStatusButton .btnRemoveFriend {background: #c33;color: #fff;} 
+#FriendStatusButton .btnAddFriend {background: #3c3;color: #fff;} 
+#FriendStatusButton #pendingFriendRequest {background: #ff9;color:#000;border:1px solid #ccc;} 
+/* @end */
+
+/* Event widget -- used on section main pages --*/
+#eventBrowser {width:250px;float:right;margin:0 0 0 15px;padding-left:10px;border-left:1px dotted #666;}
+#eventBrowser .eventList .widgetItemImage img, #eventBrowser .venueList .widgetItemImage img {display:none !important;}
+#eventBrowser .eventList .widgetItemImage, #eventBrowser .venueList .widgetItemImage {width:0;height:0;}
+#eventBrowser .eventList .widgetItemBody, #eventBrowser .venueList .widgetItemBody {width:100%}
+#eventBrowser .socialButtons {display:none;}
+#eventBrowser .eventList, #eventBrowser .venueList {margin:15px 0;border:0;}
+#eventBrowser .eventList .eventStart {display:none;}
+
+      

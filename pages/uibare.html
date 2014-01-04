@@ -6,41 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="../css/voting.css">
 	</head>
 	<body>
-		<div class="vvToolbar">
-			<button class="vvBtnAnnotator"><img src="../images/postit.png"><br><span>Load Notes</span></button>
-			<button class="vvBtnRead"><img src="../images/book.png"><br><span>Text Only</span></button>
-			<button class="vvBtnSpeak"><img src="../images/speak.png"><br><span>Speak</span></button>
-			<button class="vvBtnReviewList"><img src="../images/review.png"><br><span>Review List</span></button>
-			<button class="vvBtnReviewNotes"><img src="../images/notebook.png"><br><span>Review Notes</span></button>
-			<button class="vvBtnReviewSlides"><img src="../images/presentation.png"><br><span>Review Slides</span></button>
-			<button class="vvBtnChangeIcons"><img src="../images/frown.png"><br><span>Not loaded</span></button>
-		</div>
-		<div class="vvToolbarShadow"></div>
-		<div class="vvPageElements">
-			<div class="vvReadabilityLookup">
-				<div class="vvReadabilitySearchPanel">
-					<input class="vvReadabilitySearchButton"/> <button class="vvReadabilitySearchButton">Retrieve page</button>
-				</div>
-				<div class="vvReadabilitySearchResults"></div>
-			</div>
-			<div class="vvReviewList">
-				<h1 class="vvReviewListTitle"></h1>
-				<ol class="vvReviewListItems"></ol>
-			</div>
-			<div class="vvReviewNotes">
-				<div class="vvReviewNotesContent"></div>
-				<div class="vvReviewNotesSidebar"></div>
-			</div>
-			<div class="vvReviewSlides">
-				<div class="vvReviewSlideContainer">
-					<div class="vvReviewSlideContent"></div>
-					<div class="vvReviewSlideControls">
-						<div class="slidePrevButton"><img src="../images/prev.png"></div>
-						<div class="slideNextButton"><img src="../images/next.png"></div>
-					</div>
-				</div>
-			</div>
-			<div class="vvContent">
 				<h1>
 					US President
 				</h1>
@@ -200,8 +165,8 @@
 				<p>
 					ENVIRONMENT: We cannot afford the health injuries, natural resource losses, and ecological disintegration that result from lax EPA enforcement. I will require EPA to address new threats to our air, land, water, and climate from hydrofracking, deepwater drilling and more. EPA must fully implement the ozone standards that were killed by the Obama Administration.
 				</p>
-			</div>
-		</div>
+				
+				
 		<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
 		<script src="../js/mespeak.js" type="text/javascript"></script>
 		<script src="../js/readability-sk.js" type="text/javascript"></script>
@@ -209,9 +174,5 @@
 		<script src="../js/jwt.js" type="text/javascript"></script>
 		<script src="../js/annotator.vote.js" type="text/javascript"></script>
 		<script src="../js/voting.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			setupReadabilitySearch('.vvReadabilityLookup')
-		
-		</script>
 	</body>
 </html>
