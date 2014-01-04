@@ -63,3 +63,6 @@ button:active {background: yellow;}
 #vvReviewNotesContent { float: left; width: 500px;  }
 #vvReviewNotesSidebar { float: right; width: 300px; padding: 20px; }
 .vvReviewSideNote { margin-bottom: 40px; background: #dee;}
+
+/* annotator likes to hide the popup controls. */
+.annotator-controls { opacity: 1 !important };
