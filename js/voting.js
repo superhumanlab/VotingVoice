@@ -25,8 +25,8 @@ $(document).ready(
 		//readabilityRequest('http://umbc.edu', 'readabilityWebTest', '#vvPageElements');
 		
 		// annotator and vote plugin
-		mainAnnotator = startAnnotator('.vvContent', 'plaintext', true);
-		votePlugin = mainAnnotator.plugins.Vote;
+		//mainAnnotator = startAnnotator('.vvContent', 'plaintext', true);
+		//votePlugin = mainAnnotator.plugins.Vote;
 		
 		// setupReviewList
 		
@@ -37,25 +37,28 @@ $(document).ready(
 // set up important stuff: the annotator, readability, the review notes, the slide show
 
 // start annotator on the specified dom element with specified tag mode
-function startAnnotator(element, tag_mode, use_speech) {
+function startAnnotator(element, read_only, tag_mode, use_speech, page_id) {
 	// plugins: auth, store, and (my own custom) vote
+	// if use_id and element has an id (usually a hash of the loaded page), use that to filter notes 
 	
-	$(element).annotator({ readOnly: false, })
+	$(element).annotator({ readOnly: read_only, })
 	.annotator('addPlugin', 'Auth', { token: getAuthToken(demoConsumerKey, demoConsumerSecret, demoUserID) })
 	.annotator('addPlugin', 'Vote', { tagMode: tag_mode, useSpeech: use_speech })
 	.annotator('addPlugin', 'Store', {
 		prefix: 'http://annotateit.org/api',
 		annotationData: {
-			'uri': window.location.href,
+			'uri': window.location.href+'#'+page_id,
 		},
 		loadFromSearch: {
 			'limit': 100,
-			'uri': window.location.href,
+			'uri': window.location.href+'#'+page_id,
 		}
 	});
 		
 	// return a reference to the annotator
-	return $(element).annotator().data('annotator');
+	mainAnnotator = $(element).annotator().data('annotator');
+	votePlugin = mainAnnotator.plugins.Vote;
+	return mainAnnotator;
 }
 
 // run readability on the specified content
@@ -154,18 +157,22 @@ function setupReviewList(annotator, idName, destinationElement) {
 }
 
 // doesn't (yet) add content
-function setupReviewNotes(annotator, idName, destinationElement) {
-	var container = $('<div id="'+idName+'" class="vvReviewNotes">');
-	var content = $('<div class="vvReviewNotesContent"></div>');
-	var sidebar = $('<div class="vvReviewNotesSidebar"></div>');
+function setupReviewNotes(annotator, destinationElement) {
+	var dest = $(destinationElement)
+	dest.empty();
 
 	var annotations = annotator.dumpAnnotations();
 	for (var i = 0; i < annotations.length; i++) {
 		var annotation = annotations[i];
-		var note = $('<div class="vvReviewSideNote">');
-		var highlight = $('<div class="vvReviewQuote"><span class="annotator-hl">'+annotation.quote+'</span></div>');
+		var span = $('.'+annotation.id);
+		var spanTop = span.offset().top;
+		
+		var note = $('<div class="vvPopupNote">');
+		note.addClass(annotation.id);
+		var highlight = $('<div class="vvReviewQuote">'+annotation.quote+'</div>');
 		var notes = $('<div class="vvReviewNote">My Notes: '+annotation.text+'</div>');
 		var icons = $('<div class="vvReviewIcons">');
+		
 		Annotator.Plugin.Vote.prototype.updateViewer(icons, annotation);
 		var dateLine  = $('<div class="vvReviewDate">Added '+ printDate(new Date(annotation.created)) +'</div>');
 	
@@ -173,13 +180,32 @@ function setupReviewNotes(annotator, idName, destinationElement) {
 		note.append(notes);
 		note.append(icons);
 		note.append(dateLine);
-		sidebar.append(note);
+		dest.append(note);
+		note.css('top',spanTop);
 	}
-
-	container.append(content);
-	container.append(sidebar);
-	$(destinationElement).append(container);
-	return container;
+	// fix overlaps
+	var minMargin = 20; // put at least this much between notes
+	var allNotes = dest.children().toArray().sort(
+		function(a,b) {
+			return $(a).offset().top - $(b).offset().top;
+		});
+	
+	
+	for (var i = 0; i < allNotes.length-1; i++) {
+		var note = $(allNotes[i]);
+		var nextNote = $(allNotes[i+1]);
+		
+		if (nextNote.offset().top < note.offset().top + note.height() + minMargin) {
+			nextNote.css('top', note.offset().top + note.height() + minMargin);
+		}
+	}
+	
+	// randomize colors for highlights and notes
+	var colorClasses = ['hl1','hl2','hl3','hl4','hl5','hl6'];
+	for (var i = 0; i < annotations.length; i++) {
+		var annotation = annotations[i];
+		$('.'+annotation.id).addClass(colorClasses[i%colorClasses.length]);
+	}
 }
 
 // note: we currently only support one slide show
@@ -366,10 +392,25 @@ function printDate(date) {
 	return date.toDateString() + " at " + date.toLocaleTimeString();
 }
 
+// hash code for storing page IDs
+// http://stackoverflow.com/questions/7616461/generate-a-hash-from-string-in-javascript-jquery
+String.prototype.hashCode = function(){
+    var hash = 0, i, char;
+    if (this.length == 0) return hash;
+    for (i = 0, l = this.length; i < l; i++) {
+        char  = this.charCodeAt(i);
+        hash  = ((hash<<5)-hash)+char;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+};
+
+// end util
+
 // start readability
 
 // get the readability source. when it's done, add the rendered html to the named container
-function readabilityRequest(scrapeUrl, destinationContainer, destinationName) {
+function readabilityRequest(scrapeUrl, destinationContainer, loadAnnotations, annotationTagMode) {
 	var url = 'http://readability.com/api/content/v1/parser?callback=?&token='+readabilityAPIKey+'&url='+scrapeUrl;
 	$.getJSON(url, function(json) {
 		if (json.error != undefined) console.log('Readability: ' + json.error);
@@ -377,14 +418,19 @@ function readabilityRequest(scrapeUrl, destinationContainer, destinationName) {
 			console.log('Readability: loaded ' + scrapeUrl);
 			var title = json.title;
 			var titleH1 = $('<h1>'+title+'</h1>');
+			var originalUrl = $('<p class="vvReadabilityOriginalUrl"><a href="'+scrapeUrl+'" target="_new">View original page</a></p>');
 			var content = $(json.content);
 			var container = $('<div class="readabilityOuter">');
-			if (destinationName !== undefined) container.attr('id', destinationName);
 			content.addClass('readabilityInner');
+			content.prepend(originalUrl);
 			content.prepend(titleH1);
 			container.append(content);
 			$(destinationContainer).empty();
 			$(destinationContainer).append(container);
+			
+			if (loadAnnotations) {
+				startAnnotator($(destinationContainer), false, 'stars', annotationTagMode, $(destinationContainer).attr('id'));
+			}
 		}
 	});
 }
@@ -402,8 +448,9 @@ function setupReadabilitySearch(element, outputID) {
 		if (inputBox.val().length > 0) {
 			if (!inputBox.val().match("^http")) inputBox.val('http://'+inputBox.val());
 			searchPanel.hide();
+			searchResults.attr('id', inputBox.val().hashCode());
 			searchResults.show();
-			readabilityRequest(inputBox.val(), searchResults);
+			readabilityRequest(inputBox.val(), searchResults, true, 'stars');
 		}
 	});
 }

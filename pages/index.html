@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>VotingVoice: Aphasia Reading Support Demo</title>
+		<style>
+			body { font-family: Helvetica, Arial, sans-serif; background: #eee; padding: 35px; }
+			h1 { background: black; color: white; padding: 10px; border-radius: 4px;}
+			h2 { font-weight: normal; font-size: medium; background: #444; color: white; padding: 6px; border-radius: 4px; margin-top: 30px;}
+			li { margin-bottom: 10px;}
+			a {color: #007;}
+			a:visited {color: #505;}
+			a[href=""] { color: #f0f;}
+		</style>
+	</head>
+	<body>
+		<h1>VotingVoice Project Demos</h1>
+		<p>This page shows prototypes and demonstration videos for UMBC's VotingVoice project. The purpose of this project is to develop software tools to help people with aphasia (and possibly other reading-related or cognitive disabilities) to read content online, to take notes on that content, and to review it later.</p>
+		<p>This page presents some initial prototypes of VotingVoice's features to solicit feedback from stakeholders. It should work in any modern web browser.</p>
+		<p>Please view the demos below, and try out the interactive examples. At the bottom of the page, there is a link to a questionnaire where you can provide feedback on the current version. The entire process should take 15 minutes or less. Thanks for your help!</p>
+		<h2>Features</h2>
+		<p>There are 4 features currently in the prototype. Each is shown in detail below.</p>
+		<ol>
+			<li><strong>Web page simplification.</strong> VotingVoice can remove distracting elements (ads, page headers) from web pages, leaving only the main page content.</li>
+			<li><strong>Text to speech.</strong> Users can select any text in the document and have it read out loud.</li>
+			<li><strong>Annotation.</strong> Users can take notes on the document and review them at any time. Notes can be made by the user or with help from someone else.</li>
+			<li><strong>Note review.</strong> Users can review their notes in several different formats.</li>
+		</ol>
+		<h2>Examples</h2>
+		<p>Here are interactive examples of each of the features.</p>
+		<h3>Web page simplification</h3>
+		<p>VotingVoice uses a <a href="http://readability.com" target="_new">text extraction algorithm</a> to find the main content in a web page and strip out extraneous content, leaving only the main article text and images. This is intended to make the page easier to read.</p>
+		<p><img src="gifs/readability-sidebyside-sm.png"/></p>
+		<p>Examples:</p>
+		<ul>
+			<li><a href="http://citypaper.com/news/election-101-1.1396307" target="_new">Original page (City Paper 2012 voter guide)</a></li>
+			<li><a href="demos/election101.html" target="_new">Simplified version of the above page</a></li>
+			<li><a href="" target="_new">Interactive demo (choose any web page)</a></li>
+		</ul>
+		<h3>Text to speech</h3>
+		<p>VotingVoice uses <a href="http://www.masswerk.at/mespeak/" target="_new">>text-to-speech software</a> to read parts of a web page without any extra software. To use text to speech, select some text with the mouse and click on the speak button that pops up.</p>
+		<p><img src="gifs/speak.gif"/></p>
+		<p>Example:</p>
+		<ul>
+			<li><a href="" target="_new">>Interactive example (MD 2012 ballot initiatives)</a></li>
+		</ul>
+		<h3>Annotation</h3>
+		<p>Users can add notes to pages using an <a href="http://annotateit.org" target="_new">online annotation tool.</a> These notes are saved on the server, and can be retrieved at any time. To add a note, drag the text, and click the Annotate button. To read the note later, mouse over (or tap) the highlighted text.</p>
+		<p><img src="gifs/annotate.gif"></p>
+		<p>Notes can also include images. Just paste the complete address of the image into the notes field, and VotingVoice will store the image.</p>
+		<p><img src="gifs/image.gif"></p>
+		<p>Finally, notes can have icon-based tags attached to them. These tags can be added to any note by clicking the icon, and are shown when the note is reviewed.
+		<p>Examples:</p>
+		<ul>
+			<li><a href="" target="_new">>Demo: Add notes (text only)</a></li>
+			<li><a href="" target="_new">>Demo: Add notes (with tags)</a></li>
+			<li><a href="" target="_new">>Demo: Page with various kinds of notes</a></li>
+		</ul>
+		<h3>Note review</h3>
+		<p>Notes are saved on the server and can be reviewed at any time. There are several ways to review notes. Notes can be reviewed as pop-ups within the original page, printed out as a list, shown in the page sidebar, or viewed as a slideshow. </p>
+		<p>Please try out each of the note review examples.</p>
+		<p>Examples:</p>
+		<ul>
+			<li><a href="" target="_new">>Demo: Pop-up notes</a></li>
+			<li><a href="" target="_new">>Demo: Printable note list</a></li>
+			<li><a href="" target="_new">>Demo: Notes in sidebar</a></li>
+			<li><a href="" target="_new">>Demo: Note review slide show</a></li>
+		</ul>
+		<h3>Full demonstration version</h3>
+		<p>You can test a complete version of the prototype, with all features active, at the following link:</p>
+		<p style="font-weight: bold;"><a href="" target="_new">>Demonstration version</a></p>
+		<h2>Feedback</h2>
+		<p>Your feedback would be extremely helpful in determining the future direction of this work. We have prepared a short questionnaire about the prototype design, and would appreciate your feedback. It should take about 5 minutes to complete.</p>
+		<p style="font-weight: bold;"><a href="https://www.surveymonkey.com/s/YY2WH92" target="_new">Please click here to access the questionnaire.</a></p>
+		<p>For other comments, questions, and feedback: email <a href="skane@umbc.edu">Shaun Kane.</a></p>
+		<h2>Source code</h2>
+		<p>Source code created for this project will be released under an open source license on <a href="https://github.com/umbc-pad-kane/" target="_new">our lab's Github page.</a></p>
+	</body>
+</html>

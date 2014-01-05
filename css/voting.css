@@ -106,26 +106,33 @@ body { margin: 0px; background: #eee; font-family: Helvetica, Arial, sans-serif;
 .button-on { background: #F2F5A9 !important;}
 .annotator-button-on { background: #81DAF5; }
 .vvToolbar button:active {background: yellow;}
+.instructions { background: yellow; padding: 20px; font-size: large;}
 
 /* annotator custom classes */
 
 /* editor */
-.annotator-tagEditor { background: #CDD8E2 !important; padding: 5px !important; height: 55px !important;}
-.annotator-tagButton { float: left; display: block; height: 50px; width: 50px; padding: 0px; border: 0px solid silver; border-radius: 5px; margin-right: 10px; margin-top: 5px;}
+.annotator-tagEditor { background: white!important; padding: 5px !important; min-height: 55px !important; }
+.annotator-tagEditor img { width: 40px; height: 40px;}
+.annotator-tagButton { display: inline-block !important; height: 40px; width: 40px; padding: 0px; border-radius: 5px; margin-right: 10px; margin-top: 5px;}
 .annotator-star { border: 0px !important; }
 
 /* viewer */
-.annotator-badge-viewer { height: 30px; padding: 0px !important;}
-.annotator-badge-viewer img { height: 25px; width: 25px; padding: 0px !important;}
-.annotator-badge-viewer div { border: 0px !important; float: left; display: block; height: 25px; width: 25px; padding: 0px !important;}
+.annotator-tagViewer { height: 30px !important; padding: 5px !important; }
+.annotator-viewer .annotator-tagViewer { background: white !important; }
+.annotator-tagViewer img { height: 30px; width: 30px; padding: 0px !important;}
+.annotator-tagViewer div {  border: 0px !important; display: inline-block; height: 25px; width: 25px; padding: 0px !important;  margin-right: 5px;}
+.annotator-viewer div{padding: 0px}
+.annotator-viewer div:first-of-type { padding-top: 0px; padding-bottom: 0px; padding: 0px; }
+.annotator-link { display: none !important;}
+
+/* hacky way to get annotator popup */
+.annotator-item span.annotator-controls+div { padding: 10px; font-size: large; font-weight: bold;}
+#annotator-field-0 { font-size: large; }
 
 /* popup */
-.annotator-adder {
-	padding: 5px; padding-right: 0px; height: 84px !important; width: 176px !important; background: url('../images/annotator-bubble.png') !important; background-repeat: no-repeat !important;
-}
-.annotator-adder button, .annotator-adder div.speakButton {
-	vertical-align: middle; text-align: center; font-family:sans-serif; background: #bbb; font-size: small; width: 80px; height: 40px; text-indent: 0px !important; padding: 0px; float: left; margin-right: 5px;
-}
+.annotator-adder { padding: 5px; padding-right: 0px; height: 84px !important; width: 176px !important; background: url('../images/annotator-bubble.png') !important; background-repeat: no-repeat !important; }
+.annotator-adder button, .annotator-adder div.speakButton { vertical-align: middle; text-align: center; font-family:sans-serif; background: #bbb; font-size: small; width: 80px; height: 40px; text-indent: 0px !important; padding: 0px; float: left; margin-right: 5px; }
+.speakButton { cursor: pointer;}
 
 /* annotator likes to hide the popup controls. */
 .annotator-controls { opacity: 1 !important; }
@@ -137,6 +144,8 @@ body { margin: 0px; background: #eee; font-family: Helvetica, Arial, sans-serif;
 	padding: 40px;
 	font-size: 20px;
 }
+
+.vvReadabilityOriginalUrl { font-size: small;}
 
 .vvReadabilitySearchForm, .vvReadabilitySearchButton {
 	padding: 10px;
@@ -181,8 +190,24 @@ body { margin: 0px; background: #eee; font-family: Helvetica, Arial, sans-serif;
 .vvReviewNotesSidebar { float: right; width: 300px; padding: 20px; }
 .vvReviewSideNote { margin-bottom: 40px; background: #dee;}
 
-.readabilityInner {
+.readabilityInner p {
 	text-align: justify;
-	width: 600px;
+	width: 650px;
 }
 
+.vvPopupNote {
+	position: absolute;
+	width: 200px;
+	min-height: 100px;
+	background: rgba(255,255,10,0.3);
+	padding: 5px;
+	border: 1px solid black;
+	left: 750px;
+}
+
+.hl1 { background: rgba(255,255,10,0.3);}
+.hl2 { background: rgba(255,10,255,0.3);}
+.hl3 { background: rgba(10,255,255,0.3);}
+.hl4 { background: rgba(255,150,150,0.3);}
+.hl5 { background: rgba(150,255,150,0.3);}
+.hl6 { background: rgba(150,150,255,0.3);}

@@ -11,14 +11,14 @@ This does a bunch of cool stuff.
 */
 
 // tag options
-var tagModes = ['plaintext', 'positiveSmiley', 'positiveCheck', 'stars', 'tag4', 'tag8'];
+var tagModes = ['plaintext', 'positiveSmiley', 'positiveCheck', 'stars', 'tag4', 'tag10'];
 var plaintext = [];
 var positiveSmiley = ['smile', 'frown'];
 var positiveCheck = ['check', 'x'];
 var stars = ['star','star', 'star', 'star'];
 var tag4 = ['check', 'x', 'qmark', 'star-full'];
-var tag8 = ['check', 'x', 'qmark', 'star-full', 'house', 'money', 'book2', 'health'];
-var starIDs = ['star1', 'star2', 'star3', 'star4']
+var tag10 = ['smile', 'frown', 'check', 'x', 'qmark', 'star-full', 'house', 'money', 'book2', 'health'];
+var starIDs = ['star1', 'star2', 'star3', 'star4', 'star5']
 
 Annotator.Plugin.Vote = function(element, options) {
 	Annotator.Plugin.apply(this, options);
@@ -35,11 +35,18 @@ Annotator.Plugin.Vote = function(element, options) {
 			.subscribe("annotationsLoaded", function(annotations) {
 				// give each annotation highlight the id of its corresponding annotation
 				for (var i = 0; i < annotations.length; i++) {
-					annotations[i].highlights[0].id = annotations[i].id;
+					for (var j = 0; j < annotations[i].highlights.length; j++) {
+						$(annotations[i].highlights[j]).addClass(annotations[i].id);
+					}
 				}
 			})
 			.subscribe("annotationCreated", function(annotation) {
-				annotation.highlights[0].id = annotation.id;
+				// our annotations don't come with an id until a page refresh, so assign a
+				// temporary id (the current time) so we can track highlights
+				annotation.id = $.now().toString();
+				for (var j = 0; j < annotation.highlights.length; j++) {
+					$(annotation.highlights[j]).addClass(annotation.id);
+				}
 			});
 			
 		// we add a field for an image (if our comment is an image)
@@ -112,7 +119,7 @@ Annotator.Plugin.Vote.prototype.updateViewer = function(field, annotation) {
 	}
 	
 	// if speech is enabled, add a speak button
-	if (this.useSpeech) {
+	if (votePlugin.useSpeech) {
 		var speakButton = $('<div class="annotator-speakButton"><img src="../images/speakbutton.png"/></div>');
 		speakButton.click(function(e) {
 			vvSpeak(annotation.text);
@@ -121,9 +128,7 @@ Annotator.Plugin.Vote.prototype.updateViewer = function(field, annotation) {
 	}
 	
 	// if we didn't add anything, remove this empty editor field
-	if ($(field).children().length == 0) $(field).remove();
-	
-	// TODO add a speak button 
+	if ($(field).children().length == 0) $(field).remove();	
 };
 
 // return the tag editor bar as a string, for the annotator
@@ -168,7 +173,7 @@ Annotator.Plugin.Vote.prototype.updateEditor = function(field, annotation) {
 				var container = $(this).parent();
 				var index = container.children().index($(this));
 				for (var i = 0; i < container.children().length; i++) {
-					var child = container.children.eq(i);
+					var child = container.children().eq(i);
 					if (i <= index) {
 						child.children("img").attr("src", "../images/star-full.png")
 						child.addClass('star-on');
@@ -210,7 +215,7 @@ Annotator.Plugin.Vote.prototype.getTagSet = function(tagMode) {
 	else if (tagMode == 'positiveCheck') return positiveCheck;
 	else if (tagMode == 'stars') return stars;
 	else if (tagMode == 'tag4') return tag4;
-	else if (tagMode == 'tag8') return tag8;	
+	else if (tagMode == 'tag10') return tag10;	
 }
 
 // set the next tag mode
