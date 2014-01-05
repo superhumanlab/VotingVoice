@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- content from http://lwvhc.files.wordpress.com/2012/05/hoco-g12.pdf -->
+<html>
+	<head>
+		<title>VotingVoice</title>
+		<link rel="stylesheet" type="text/css" href="../css/voting.css">
+	</head>
+	<body>
+
+		<div class="vvPageElements">
+			<div class="vvContent">
+				<div id="readability-content">
+					<div id="readability-page-1" class="page">
+						<div class="">
+							<h4>
+								Question 1<br>
+								Constitutional Amendment (Ch. 394 of the 2011 Legislative Session)<br>
+								Qualifications for Prince George's County Orphans' Court Judges
+							</h4>
+							<p>
+								(Amending Article IV, Section 40 of the Maryland Constitution)
+							</p>
+							<p>
+								Requires judges of the Orphans' Court for Prince George's County to be admitted to practice law in this State and to be a member in good standing of the Maryland Bar.
+							</p>
+							<p>
+								<strong>For the Constitutional Amendment<br>
+								Against the Constitutional Amendment</strong>
+							</p><a name="state2" id="state2"></a>
+							<h4>
+								Question 2<br>
+								Constitutional Amendment (Ch. 146 of the 2012 Legislative Session)<br>
+								Qualifications for Baltimore County Orphans' Court Judges
+							</h4>
+							<p>
+								(Amending Article IV, Section 40 of the Maryland Constitution)
+							</p>
+							<p>
+								Requires judges of the Orphans' Court for Baltimore County to be admitted to practice law in this State and to be a member in good standing of the Maryland Bar.
+							</p>
+							<p>
+								<strong>For the Constitutional Amendment<br>
+								Against the Constitutional Amendment</strong>
+							</p><a name="state3" id="state3"></a>
+							<h4>
+								Question 3<br>
+								Constitutional Amendment (Ch. 147 of the 2012 Legislative Session)<br>
+								Suspension and Removal of Elected Officials
+							</h4>
+							<p>
+								(Amending Article XV, Section 2 of the Maryland Constitution)
+							</p>
+							<p>
+								Changes the point at which an elected official charged with certain crimes is automatically suspended or removed from office. Under existing law, an elected official who is convicted or pleads no contest is suspended and is removed only when the conviction becomes final. Under the amended law, an elected official is suspended when found guilty and is removed when the conviction becomes final or when the elected official pleads guilty or no contest.
+							</p>
+							<p>
+								<strong>For the Constitutional Amendment<br>
+								Against the Constitutional Amendment</strong>
+							</p><a name="state4" id="state4"></a>
+							<h4>
+								Question 4<br>
+								Referendum Petition<br>
+								(Ch. 191 of the 2011 Legislative Session)<br>
+								Public Institutions of Higher Education - Tuition Rates
+							</h4>
+							<p>
+								Establishes that individuals, including undocumented immigrants, are eligible to pay in-state tuition rates at community colleges in Maryland, provided the student meets certain conditions relating to attendance and graduation from a Maryland high school, filing of income taxes, intent to apply for permanent residency, and registration with the selective service system (if required); makes such students eligible to pay in-state tuition rates at a four-year public college or university if the student has first completed 60 credit hours or graduated from a community college in Maryland; provides that students qualifying for in-state tuition rates by this method will not be counted as in-state students for purposes of counting undergraduate enrollment; and extends the time in which honorably discharged veterans may qualify for in-state tuition rates.
+							</p>
+							<p>
+								<strong>For the Referred Law<br>
+								Against the Referred Law</strong>
+							</p><a name="state5" id="state5"></a>
+							<h4>
+								Question 5<br>
+								Referendum Petition<br>
+								(Ch. 1 of the 2011 Special Session)<br>
+								Congressional Districting Plan
+							</h4>
+							<p>
+								Establishes the boundaries for the State's eight United States Congressional Districts based on recent census figures, as required by the United States Constitution.
+							</p>
+							<p>
+								<strong>For the Referred Law<br>
+								Against the Referred Law</strong>
+							</p><a name="state6" id="state6"></a>
+							<h4>
+								Question 6<br>
+								Referendum Petition<br>
+								(Ch. 2 of the 2012 Legislative Session)<br>
+								Civil Marriage Protection Act
+							</h4>
+							<p>
+								Establishes that Maryland's civil marriage laws allow gay and lesbian couples to obtain a civil marriage license, provided they are not otherwise prohibited from marrying; protects clergy from having to perform any particular marriage ceremony in violation of their religious beliefs; affirms that each religious faith has exclusive control over its own theological doctrine regarding who may marry within that faith; and provides that religious organizations and certain related entities are not required to provide goods, services, or benefits to an individual related to the celebration or promotion of marriage in violation of their religious beliefs.
+							</p>
+							<p>
+								<strong>For the Referred Law<br>
+								Against the Referred Law</strong>
+							</p><a name="state7" id="state7"></a>
+							<h4>
+								Question 7<br>
+								Gaming Expansion Referendum<br>
+								(Ch. 1 of the Second 2012 Special Session)<br>
+								Gaming Expansion
+							</h4>
+							<p>
+								Do you favor the expansion of commercial gaming in the State of Maryland for the primary purpose of raising revenue for education to authorize video lottery operation licensees to operate "table games" as defined by law; to increase from 15,000 to 16,500 the maximum number of video lottery terminals that may be operated in the State; and to increase from 5 to 6 the maximum number of video lottery operation licenses that may be awarded in the State and allow a video lottery facility to operate in Prince George's County?
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="../js/mespeak.js" type="text/javascript"></script>
+		<script src="../js/readability-sk.js" type="text/javascript"></script>
+		<script src="../js/annotator-full.min.js" type="text/javascript"></script>
+		<script src="../js/jwt.js" type="text/javascript"></script>
+		<script src="../js/annotator.vote.js" type="text/javascript"></script>
+		<script src="../js/voting.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				startSpeech();
+				startAnnotator('.vvContent', false, 'plaintext', true, 'mdballot');
+			
+				mainAnnotator.onAdderClick = null;
+				$('.annotator-adder button').hide();	
+			})
+		</script>
+		<style type="text/css">
+			div.speakButton { width: 165px !important;}
+		</style>
+	</body>
+</html>

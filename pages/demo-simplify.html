@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- content from http://lwvhc.files.wordpress.com/2012/05/hoco-g12.pdf -->
+<html>
+	<head>
+		<title>VotingVoice</title>
+		<link rel="stylesheet" type="text/css" href="../css/voting.css">
+	</head>
+	<body>
+		<div class="vvPageElements">
+			<div class="vvReadabilityLookup">
+				<div class="vvReadabilitySearchPanel">
+					<h2>Load page</h2>
+					<p>Enter a web site URL into the search box and click "Retrieve page"
+						to load a text-only version of that page. </p>
+					<input class="vvReadabilitySearchForm" placeholder="http://www.umbc.edu" value="citypaper.com/news/election-101-1.1396307"/> <button class="vvReadabilitySearchButton">Retrieve page</button>
+				</div>
+				<div class="vvReadabilitySearchResults"></div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="../js/mespeak.js" type="text/javascript"></script>
+		<script src="../js/readability-sk.js" type="text/javascript"></script>
+		<script src="../js/annotator-full.min.js" type="text/javascript"></script>
+		<script src="../js/jwt.js" type="text/javascript"></script>
+		<script src="../js/annotator.vote.js" type="text/javascript"></script>
+		<script src="../js/voting.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			showOnly($('.vvReadabilityLookup'));
+			setupReadabilitySearch('.vvReadabilityLookup', 'readabilityOutput', false);
+		</script>
+	</body>
+</html>

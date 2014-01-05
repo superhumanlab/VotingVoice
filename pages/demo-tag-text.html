@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/voting.css">
 	</head>
 	<body>
+		<div class="vvPageElements">
+			<div class="vvContent">
 				<h1>
 					US President
 				</h1>
@@ -165,8 +167,8 @@
 				<p>
 					ENVIRONMENT: We cannot afford the health injuries, natural resource losses, and ecological disintegration that result from lax EPA enforcement. I will require EPA to address new threats to our air, land, water, and climate from hydrofracking, deepwater drilling and more. EPA must fully implement the ozone standards that were killed by the Obama Administration.
 				</p>
-				
-				
+			</div>
+		</div>
 		<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
 		<script src="../js/mespeak.js" type="text/javascript"></script>
 		<script src="../js/readability-sk.js" type="text/javascript"></script>
@@ -174,5 +176,9 @@
 		<script src="../js/jwt.js" type="text/javascript"></script>
 		<script src="../js/annotator.vote.js" type="text/javascript"></script>
 		<script src="../js/voting.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			startAnnotator('.vvContent', false, 'plaintext', true, 'demo-tagtext');
+
+		</script>
 	</body>
 </html>

@@ -8,6 +8,7 @@ var readabilityAPIKey = '605b8405ed2bdeb5a63856a6972c503f1306e9de';
 // globals
 var mainAnnotator = null;
 var votePlugin = null;
+var speechAvailable = false;
 
 // where the magic happens
 $(document).ready(
@@ -16,7 +17,7 @@ $(document).ready(
 		//setupDocument(['btnAnnotator']);
 		
 		// speech
-		startSpeech();
+		// startSpeech();
 		
 		// readability mode
 		// startReadability("#vvContent", "vvReadOverlay", "#vvPageElements");
@@ -127,20 +128,21 @@ function setupDocument(toolbarOptions) {
 // the following 3 functions create DIV elements (under the destination) 
 // with review notes
 
-function setupReviewList(annotator, idName, destinationElement) {
-	var container = $('<div id="'+idName+'" class="vvReviewList">');
-	var heading = $('<h1 class="vvReviewListTitle"></h1>');
-	var list = $('<ol class="vvReviewListItems"></ol>');
+function setupReviewList(annotator, destinationElement) {
+	var container = $(destinationElement);
+	var heading = container.find('.vvReviewListTitle');
+	var list = container.find('.vvReviewListItems');
+	list.empty();
 	
-	heading.html('Review: ' + document.title); 
+	heading.html('Review list: ' + $('.readabilityTitle').eq(0).text()); 
 	var annotations = annotator.dumpAnnotations();
 	for (var i = 0; i < annotations.length; i++) {
 		var annotation = annotations[i];
 		var listItem = $('<li>');
-		var highlight = $('<div class="vvReviewQuote"><span class="annotator-hl">'+annotation.quote+'</span></div>');
-		var notes = $('<div class="vvReviewNote">My Notes: '+annotation.text+'</div>');
-		var icons = $('<div class="vvReviewIcons">');
-		Annotator.Plugin.Vote.prototype.updateViewer(icons, annotation); // add tag icons
+		var highlight = $('<div class="vvReviewQuote">"'+annotation.quote+'"</span></div>');
+		var notes = $('<div class="vvReviewNote">'+annotation.text+'</div>');
+		var icons = Annotator.Plugin.Vote.prototype.getIconsForAnnotation(annotation);
+		// remove speaker button
 		var dateLine  = $('<div class="vvReviewDate">Added '+ printDate(new Date(annotation.created)) +'</div>');
 	
 		listItem.append(highlight);
@@ -150,13 +152,12 @@ function setupReviewList(annotator, idName, destinationElement) {
 		list.append(listItem);
 	}
 	
-	container.append(heading);
-	container.append(list);
-	$(destinationElement).append(container);
 	return container;
 }
 
-// doesn't (yet) add content
+// margin notes
+var noteColorClasses = ['hl1','hl2','hl3','hl4','hl5','hl6'];
+
 function setupReviewNotes(annotator, destinationElement) {
 	var dest = $(destinationElement)
 	dest.empty();
@@ -169,11 +170,9 @@ function setupReviewNotes(annotator, destinationElement) {
 		
 		var note = $('<div class="vvPopupNote">');
 		note.addClass(annotation.id);
-		var highlight = $('<div class="vvReviewQuote">'+annotation.quote+'</div>');
-		var notes = $('<div class="vvReviewNote">My Notes: '+annotation.text+'</div>');
-		var icons = $('<div class="vvReviewIcons">');
-		
-		Annotator.Plugin.Vote.prototype.updateViewer(icons, annotation);
+		var highlight = $('<div class="vvReviewQuote">"'+excerptString(annotation.quote,40)+'"</div>');
+		var notes = $('<div class="vvReviewNote">'+annotation.text+'</div>');
+		var icons = Annotator.Plugin.Vote.prototype.getIconsForAnnotation(annotation);
 		var dateLine  = $('<div class="vvReviewDate">Added '+ printDate(new Date(annotation.created)) +'</div>');
 	
 		note.append(highlight);
@@ -200,34 +199,50 @@ function setupReviewNotes(annotator, destinationElement) {
 		}
 	}
 	
-	// randomize colors for highlights and notes
-	var colorClasses = ['hl1','hl2','hl3','hl4','hl5','hl6'];
+	// randomize colors for highlights and notes	
+	
+	// in case we run this multiple times, remove old notes
+	for(var i = 0; i < noteColorClasses.length; i++) {
+		$('.'+noteColorClasses[i]).removeClass(noteColorClasses[i]);
+	}
+	
 	for (var i = 0; i < annotations.length; i++) {
 		var annotation = annotations[i];
-		$('.'+annotation.id).addClass(colorClasses[i%colorClasses.length]);
+		$('.'+annotation.id).addClass(noteColorClasses[i%noteColorClasses.length]);
+	}
+}
+
+// clear out notes and old note colors
+// also done by add notes, so no need to run this if updating notes
+function removeReviewNotes(element) {
+	var dest = $(element)
+	dest.empty();	
+	
+	// in case we run this multiple times, remove old notes
+	for(var i = 0; i < noteColorClasses.length; i++) {
+		$('.'+noteColorClasses[i]).removeClass(noteColorClasses[i]);
 	}
 }
 
 // note: we currently only support one slide show
-function setupReviewSlides(annotator, idName, destinationElement) {
-	var container = $('<div id="'+idName+'" class="vvReviewSlides">');
-	var content = $('<div class="vvReviewSlideContent">');
-	var controls = $('<div class="vvReviewSlideControls"/>')
-	var prevButton = $('<div class="slidePrevButton"><img src="../images/prev.png"></div>');
-	var nextButton = $('<div class="slideNextButton"><img src="../images/next.png"></div>');
-	controls.append(prevButton);
-	controls.append(nextButton);
-	
-	var startSlide = $('<div class="vvReviewSlide"><div class="vvReviewTitle">Review: ' + document.title + '</div></div>');
-	content.append(startSlide);
+function setupReviewSlides(annotator, destinationElement) {
+	var container = $(destinationElement);
+	var content = container.find('.vvReviewSlideContent');
+	var controls = container.find('.vvReviewSlideControls');
+	var prevButton = container.find('.slidePrevButton');
+	var nextButton = container.find('.slideNextButton');
+	content.empty();
 		
+	var startSlide = $('<div class="vvReviewSlide"><div class="vvReviewTitle">Review slides: ' + $('.readabilityTitle').eq(0).text() + '</div></div>');
+	content.append(startSlide);
+	
+	var annotations = annotator.dumpAnnotations();
 	for (var i = 0; i < annotations.length; i++) {
 		var annotation = annotations[i];
 		var slide = $('<div class="vvReviewSlide">');
-		var highlight = $('<div class="vvReviewQuote"><span class="annotator-hl">'+annotation.quote+'</span></div>');
-		var notes = $('<div class="vvReviewNote">My Notes: '+annotation.text+'</div>');
-		var icons = $('<div class="vvReviewIcons">');
-		Annotator.Plugin.Vote.prototype.updateViewer(icons, annotation);
+		var highlight = $('<div class="vvReviewQuote">"'+annotation.quote+'"</div>');
+		var notes = $('<div class="vvReviewNote">'+annotation.text+'</div>');
+		var icons = Annotator.Plugin.Vote.prototype.getIconsForAnnotation(annotation);
 		var dateLine  = $('<div class="vvReviewDate">Added '+ printDate(new Date(annotation.created)) + '</div>');
 
 		slide.append(highlight);
@@ -239,11 +254,7 @@ function setupReviewSlides(annotator, idName, destinationElement) {
 
 	var endSlide = $('<div class="vvReviewSlide"><div class="vvReviewTitle">The End</div></div>');
 	content.append(endSlide);
-	
-	container.append(content);
-	container.append(controls);
-	$(destinationElement).append(container);
-	
+		
 	// set up slides
 	initSlideShow(content,prevButton,nextButton);
 	return container;
@@ -321,14 +332,24 @@ if (!Date.prototype.toISOString) {
 
 // initialize mespeak
 function startSpeech() {
-	meSpeak.loadConfig("../js/mespeak_config.json");
-	meSpeak.loadVoice('../js/en-us.json');
+	try {
+		meSpeak.loadConfig("../js/mespeak_config.json");
+		meSpeak.loadVoice('../js/en-us.json');
+		speechAvailable = true;
+	}
+	catch (e) {
+		console.log('Could not load speech: ' + e.toString());
+	}
 }
 
 // speak using meSpeak
 function vvSpeak(text) {
-	if (text == null || text.length == 0) text = 'no comment';
-	var speaking = meSpeak.speak(text, { variant: 'f2' });
+	if (speechAvailable) {
+		if (text == null || text.length == 0) text = 'no comment';
+		var speaking = meSpeak.speak(text, { variant: 'f2' });
+	} else {
+		console.log('Could not speak; speech not loaded.Message: ' + text);
+	}
 }
 
 // end mespeak
@@ -364,11 +385,11 @@ function showSlide(n) {
 		if (i == n) slides.eq(i).show();
 		else slides.eq(i).hide();
 	}
-	nextButton.show();
-	prevButton.show();
+	nextButton.removeClass('slideButtonDisabled');
+	prevButton.removeClass('slideButtonDisabled');
 	
-	if (n == 0) prevButton.hide();
-	if (n == slides.length - 1) nextButton.hide();
+	if (n == 0) prevButton.addClass('slideButtonDisabled');
+	if (n == slides.length - 1) nextButton.addClass('slideButtonDisabled');
 	slideIndex = n;
 }
 // end slideshow
@@ -417,7 +438,7 @@ function readabilityRequest(scrapeUrl, destinationContainer, loadAnnotations, an
 		else {
 			console.log('Readability: loaded ' + scrapeUrl);
 			var title = json.title;
-			var titleH1 = $('<h1>'+title+'</h1>');
+			var titleH1 = $('<h1 class="readabilityTitle">'+title+'</h1>');
 			var originalUrl = $('<p class="vvReadabilityOriginalUrl"><a href="'+scrapeUrl+'" target="_new">View original page</a></p>');
 			var content = $(json.content);
 			var container = $('<div class="readabilityOuter">');
@@ -429,13 +450,13 @@ function readabilityRequest(scrapeUrl, destinationContainer, loadAnnotations, an
 			$(destinationContainer).append(container);
 			
 			if (loadAnnotations) {
-				startAnnotator($(destinationContainer), false, 'stars', annotationTagMode, $(destinationContainer).attr('id'));
+				startAnnotator($(destinationContainer), false, annotationTagMode, true, $(destinationContainer).attr('id'));
 			}
 		}
 	});
 }
 
-function setupReadabilitySearch(element, outputID) {
+function setupReadabilitySearch(element, outputID, useAnnotator, annotatorMode) {
 	var element = $(element);
 	var searchPanel = element.find('.vvReadabilitySearchPanel')
 	var searchResults = element.find('.vvReadabilitySearchResults');
@@ -450,7 +471,7 @@ function setupReadabilitySearch(element, outputID) {
 			searchPanel.hide();
 			searchResults.attr('id', inputBox.val().hashCode());
 			searchResults.show();
-			readabilityRequest(inputBox.val(), searchResults, true, 'stars');
+			readabilityRequest(inputBox.val(), searchResults, useAnnotator, annotatorMode);
 		}
 	});
 }
@@ -511,4 +532,10 @@ function vvBtnReviewSlides_click(e) {
 		showOnly('#vvContent');
 		buttonsOff("#vvBtnReviewSlides");
 	}
+}
+
+// summarize text
+function excerptString(str, maxLength) {
+	if (str.length < maxLength) return str;
+	else return str.substring(0,maxLength) + '...';
 }

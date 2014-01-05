@@ -93,9 +93,29 @@ Annotator.Plugin.Vote.prototype.updateViewer = function(field, annotation) {
 	
 	// if the note has tags, show them
 	// we have a different mode for stars
-	if (annotation.tags != null && annotation.tags.length > 0) {
-		var buttonContainer = $('<div>').addClass('annotator-tagViewer');
+	var buttonContainer = Annotator.Plugin.Vote.prototype.getIconsForAnnotation(annotation);
+	
+	// if we added any tags, add the container
+	if (buttonContainer.children().length > 0) $(field).append(buttonContainer);
+	
+	// if speech is enabled, add a speak button
+	if (votePlugin.useSpeech && speechAvailable) {
+		var speakButton = $('<div class="annotator-speakButton"><img src="../images/speakbutton.png"/></div>');
+		speakButton.click(function(e) {
+			vvSpeak(annotation.text);
+		})
+		$(field).append(speakButton);
+	}
+	
+	// if we didn't add anything, remove this empty editor field
+	if ($(field).children().length == 0) $(field).remove();	
+};
 
+// return it as a container
+Annotator.Plugin.Vote.prototype.getIconsForAnnotation = function(annotation) {
+	var buttonContainer = $('<div>').addClass('annotator-tagViewer');
+	
+	if (annotation.tags != null && annotation.tags.length > 0) {
 		if (annotation.tagMode != "stars")
 		{
 			for (var i = 0; i < annotation.tags.length; i++) {
@@ -112,24 +132,10 @@ Annotator.Plugin.Vote.prototype.updateViewer = function(field, annotation) {
 					buttonContainer.append(button);
 				}
 			}
-		}
-		
-		// if we added any tags, add the container
-		if (buttonContainer.children().length > 0) $(field).append(buttonContainer);
-	}
-	
-	// if speech is enabled, add a speak button
-	if (votePlugin.useSpeech) {
-		var speakButton = $('<div class="annotator-speakButton"><img src="../images/speakbutton.png"/></div>');
-		speakButton.click(function(e) {
-			vvSpeak(annotation.text);
-		})
-		$(field).append(speakButton);
-	}
-	
-	// if we didn't add anything, remove this empty editor field
-	if ($(field).children().length == 0) $(field).remove();	
-};
+		}		
+	}	
+	return buttonContainer;
+}
 
 // return the tag editor bar as a string, for the annotator
 Annotator.Plugin.Vote.prototype.updateEditor = function(field, annotation) {
