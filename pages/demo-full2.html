@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- content from http://lwvhc.files.wordpress.com/2012/05/hoco-g12.pdf -->
+<html>
+	<head>
+		<title>VotingVoice</title>
+		<link rel="stylesheet" type="text/css" href="../css/voting.css">
+		<style>
+		@media print
+		{
+			.vvToolbar, .vvToolbarShadow { display: none;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="vvToolbar">
+			<button class="vvBtnRestart"><img src="../images/postit.png"><br><span>Restart</span></button>
+			<button class="vvBtnReviewList" disabled><img src="../images/review.png"><br><span>Review List</span></button>
+			<button class="vvBtnReviewNotes" disabled><img src="../images/notebook.png"><br><span>Review Notes</span></button>
+			<button class="vvBtnReviewSlides" disabled><img src="../images/presentation.png"><br><span>Review Slides</span></button>
+		</div>
+		<div class="vvToolbarShadow"></div>
+		<div class="vvPageElements">
+			<div class="vvReadabilityLookup">
+				<div class="vvReadabilitySearchPanel">
+					<h2>Load page</h2>
+					<p>Enter a web site URL into the search box and click "Retrieve page"
+						to load a text-only version of that page. </p>
+					<input class="vvReadabilitySearchForm" placeholder="http://www.umbc.edu" value="citypaper.com/news/election-101-1.1396307"/> <button class="vvReadabilitySearchButton">Retrieve page</button>
+				</div>
+				<div class="vvReadabilitySearchResults"></div>
+			</div>
+			<div class="vvReviewList" style="display:none;">
+				<h1 class="vvReviewListTitle"></h1>
+				<ol class="vvReviewListItems"></ol>
+			</div>
+			<div class="vvReviewSlides" style="display:none;">
+				<div class="vvReviewSlideContainer">
+					<div class="vvReviewSlideContent"></div>
+					<div class="vvReviewSlideControls">
+						<div class="slidePrevButton"><img src="../images/prev.png"></div>
+						<div class="slideNextButton"><img src="../images/next.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="vvPopupNotes">
+		</div>
+		<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="../js/mespeak.js" type="text/javascript"></script>
+		<script src="../js/readability-sk.js" type="text/javascript"></script>
+		<script src="../js/annotator-full.min.js" type="text/javascript"></script>
+		<script src="../js/jwt.js" type="text/javascript"></script>
+		<script src="../js/annotator.vote.js" type="text/javascript"></script>
+		<script src="../js/voting.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				startSpeech();
+				setupReadabilitySearch('.vvReadabilityLookup', 'vvReadability', false, 'tag10');
+				
+				$('.vvReadabilitySearchButton').click(function() {
+					$('.vvBtnReviewList').attr('disabled',false);
+					$('.vvBtnReviewNotes').attr('disabled',false);
+					$('.vvBtnReviewSlides').attr('disabled',false);					
+				});
+				
+				$('.vvBtnRestart').click(function(e) {
+					location.reload();
+				})
+				
+				$('.vvBtnReviewNotes').click(function(e) {
+					if (!$('.vvBtnReviewNotes').hasClass('button-on')) {
+						buttonOn($('.vvBtnReviewNotes'));
+						setupReviewNotes(mainAnnotator, '.vvPopupNotes');
+					}
+					else {
+						buttonsOff($('.vvBtnReviewNotes'));
+						removeReviewNotes('.vvPopupNotes');
+					}
+				});
+				
+				$('.vvBtnReviewList').click(function(e) {
+					if (!$('.vvBtnReviewList').hasClass('button-on')) {
+						buttonOn($('.vvBtnReviewList'));
+						setupReviewList(mainAnnotator, '.vvReviewList');
+						showOnly('.vvReviewList');
+					}
+					else {
+						buttonsOff($('.vvBtnReviewList'));
+						showOnly('.vvReadabilityLookup');
+					}
+				});
+				
+				$('.vvBtnReviewSlides').click(function(e) {
+					if (!$('.vvBtnReviewSlides').hasClass('button-on')) {
+						buttonOn($('.vvBtnReviewSlides'));
+						setupReviewSlides(mainAnnotator, '.vvReviewSlides');
+						showOnly('.vvReviewSlides');
+					}
+					else {
+						buttonsOff($('.vvBtnReviewSlides'));
+						showOnly('.vvReadabilityLookup');
+					}
+				});
+				
+			})
+		
+
+		</script>
+	</body>
+</html>

@@ -367,12 +367,16 @@ function initSlideShow(container, prevB, nextB) {
 	prevButton = $(prevB);
 	
 	$(nextButton).click(function(e) {
-		slideIndex += 1;
-		showSlide(slideIndex);
+		if (!$(nextButton).hasClass('slideButtonDisabled')) {
+			slideIndex += 1;
+			showSlide(slideIndex);
+		}
 	})
 	$(prevButton).click(function(e) {
-		slideIndex -= 1
-		showSlide(slideIndex);
+		if (!$(prevButton).hasClass('slideButtonDisabled')) {
+			slideIndex -= 1;
+			showSlide(slideIndex);
+		}
 	})
 	
 	showSlide(0);

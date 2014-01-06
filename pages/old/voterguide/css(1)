@@ -1,6 +1,0 @@
-@font-face {
-  font-family: 'Holtwood One SC';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Holtwood One SC'), local('HoltwoodOneSC'), url(http://themes.googleusercontent.com/static/fonts/holtwoodonesc/v4/sToOq3cIxbfnhbEkgYNuBcR6S2I7R_2PmaFugZazRjg.woff) format('woff');
-}
